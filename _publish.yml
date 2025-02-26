@@ -1,0 +1,4 @@
+- source: RDM_DepositingData.qmd
+  quarto-pub:
+    - id: 34122db7-c17d-4947-864d-f9b8b7200bdf
+      url: 'https://daniel-manrique.quarto.pub/rdm_depositingdata'
