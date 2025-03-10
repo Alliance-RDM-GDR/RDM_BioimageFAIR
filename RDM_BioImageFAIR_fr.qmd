@@ -1,0 +1,713 @@
+---
+title: "Partage d'images biomédicales et flux de travail reproductibles"
+subtitle: "Guide à l'usage des chercheurs"
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+format: 
+  html:
+    embed-resources: true
+    mermaid:
+      theme: forest
+      
+  revealjs:
+    footer: "Partage d'images biomédicales et flux de travail - Daniel Manrique-Castano, Ph.D"
+    logo: "images/alliance_logo.png"
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+      
+  docx:
+    number-sections: true
+    highlight-style: github
+      
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
+
+css: styles.css
+bibliography: references.bib 
+editor: source
+---
+
+# Comprendre la bio-imagerie
+
+## 
+
+::: {style="text-align: center;font-size: 60%"}
+![](images/ImagingSamples.jpg){fig-align="center" width="100%"}
+:::
+
+## Les images contiennent d'innombrables données{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![Henning Falk (2022) - NumFOCUS](images/DataTheraphy.png){fig-align="center" width="65%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 70%"}
+La bio-imagerie est entrée dans le domaine des big data qui comprennent des [ensembles de données de plus en plus complexes]{style="color:green ;"}. Nous sommes confrontés à de nombreux défis, notamment le [traitement des données]{style="text-decoration : underline ;"} et la [gestion]{style="text-decoration : underline ;"} appropriés, ainsi que la création et le partage de [flux de travail d'analyse d'images reproductibles]{style="text-decoration : underline ;"}.
+:::
+::::
+:::::
+
+## Cyle de vie de BioImage 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![Cyle de vie de BioImage [Schmidt, et al. 2024](https://doi.org/10.1111/jmi.13317)](images/ImageLifeCycle.jpg){fig-align="center" width="80%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 90%"}
+Les bio-images ont un potentiel de découverte scientifique qui va au-delà de leur objectif d'acquisition initial lorsqu'elles sont traitées conformément aux [principes FAIR]{style="color:green;"} ([Schmidt, et al. 2024](https://onlinelibrary.wiley.com/doi/10.1111/jmi.13317); voir [Wilkinson, et al. 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC4792175/)).
+:::
+::::
+:::::
+
+# Planification et acquisition d'images
+
+## Aperçu général{.center}
+
+::: {style="text-align: left;font-size: 80%"}
+Le stockage conventionnel basé sur un système de fichiers atteint rapidement ses [limites]{style="color:red ;"}. Avant que les données ne soient générées, les chercheurs doivent réfléchir à la manière dont elles seront [stockées]{style="text-decoration : underline ;"}, [déplacées]{style="text-decoration : underline ;"}, [documentées]{style="text-decoration : underline ;"} et [analysées]{style="text-decoration : underline ;"} pendant (et après) la durée de vie du projet.
+:::
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![](images/Overcapacity.png){fig-align="center" width="80%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 60%"}
+
+**Directions actuelles :**
+
+- Exploiter les plans de gestion des données de recherche ([PGD]{style="color:green ;"})
+- Le stockage dans le nuage et les plateformes (par exemple OMERO) deviendront une [OBLIGATION]{style="color:green ;"}.
+- Nécessité de formats standardisés ([NGFFs]{style="«"color:green ;"}).
+:::
+::::
+:::::
+
+## Planification des expériences d'imagerie{.center}  
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+### {{< bi gear-fill >}} Hadware pour l'imagerie
+::: {style="text-align: left;font-size: 80%"}
+- Appareil d'imagerie (lumière, confocal, électronique) 
+- Définir les paramètres d'imagerie - adaptés à l'analyse d'images
+:::
+::::
+
+:::: {#second-column}
+### {{< bi database-fill >}} Stockage des images
+::: {style="text-align: left;font-size: 80%"}
+- Taille de l'image - Gigaoctets ou téraoctets
+- Complexité de l'image - Plans focaux simples ou multiples, images en direct ou à intervalles réguliers
+:::
+::::
+:::::
+
+::: callout-warning
+## Comment allez-vous traiter vos images ?
+Lorsque vous planifiez une expérience d'imagerie, envisagez l'approche la plus [appropriée]{style=" text-decoration : underline ;"}  en fonction de vos capacités de [traitement et d'analyse des données]{style="color:green ;"}. 
+:::
+
+
+## Acquisition de données{.center}  
+::: {style="text-align: left;font-size: 80%"}
+- {{< bi gear-fill >}} [configuration et étalonnage]{style="color:green ;"} d'instrument et [paramètres d'imagerie]{style="color:green ;"} (taille, profondeur de bits, saturation, etc.).
+- {{< bi card-image >}} Donner la priorité aux [formats de fichiers ouverts]{style="color:green ;"} (.TIFF) par rapport aux formats propriétaires (.CZI).
+- {{< bi database-fill >}} Enregistrement des [métadonnées]{style="color:green ;"}.
+:::
+
+::: callout-tip
+## Les paramètres d'acquisition sont essentiels
+Pendant l'imagerie, il est nécessaire d'envisager un compromis entre les [paramètres]{style=« color:green ; »} nécessaires pour répondre à la question de recherche (grossissement, taille, profondeur de bits) et la [puissance de traitement disponible]{style=« color:green ; »} (stockage, puissance de calcul).
+:::
+
+## Quels paramètres dois-je utiliser pour répondre à ma question de recherche ?{.center} 
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![Image 8 bits - Avec la permission de Daniel Manrique-Castano](images/Image_8bit.png){width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+![Image 16 bits - Avec la permission de Daniel Manrique-Castano](images/Image_16bit.png){width="100%"}
+:::
+::::
+:::::
+
+## Considérez que...{.center}
+
+::: {style="text-align: center;font-size: 60%"}
+![](images/Microscope.jpeg){fig-align="center" width="100%"}
+:::
+
+## Transformer les formats de fichiers {.center}
+
+Après avoir acquis des images originales en [formats propriétaires]{style="color:red ;"} (c'est-à-dire .CZI ou .LIF), les chercheurs peuvent utiliser différents outils pour ouvrir et transformer les images en [formats ouverts]{style="color:green ;"} (.TIFF).
+
+::::: {layout-nrow="2" layout-valign="center"}
+:::: {#first-row}
+::: {style="text-align: center;font-size: 70%"}
+![Bio-Formats de [Open Microscopy Environment](https://www.openmicroscopy.org/bio-formats/downloads/) (compatible avec [FIJI](https://imagej.net/formats/bio-formats))](images/Bioformats-Omero.png){fig-align="center" width="70%"}
+:::
+::::
+
+:::: {#second-row}
+::: {style="text-align: center;font-size: 70%"}
+![Bio-Formats de [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-align="center" width="70%"}
+:::
+::::
+:::::
+
+## Le format OME.TIFF {.center}
+
+Format développé par l'[Open Microscopy Environment (OME)] (https://www.openmicroscopy.org/) sur la base de la spécification TIFF. OME-TIFF incorpore des métadonnées [OME-XML]() :
+
+- Des métadonnées [OME-XML](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r47). 
+- Supporte des données multidimensionnelles et multi-images (voir [exemples](https://downloads.openmicroscopy.org/images/OME-TIFF/2015-01/bioformats-artificial/)).
+- Prend en charge les données complexes multidimensionnelles et à fort contenu à l'aide de [BigTiff](http://bigtiff.org/), en raison des limites du format TIFF (jusqu'à 4 Go).
+- Possibilité de répartir les données sur plusieurs fichiers (voir [exemple](https://downloads.openmicroscopy.org/images/OME-TIFF/2015-01/tubhiswt-4D/)).
+
+
+## Format de fichier de nouvelle génération [OME-Zarr](https://link.springer.com/article/10.1007/s00418-023-02209-1){.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![Pyramide de l'image](images/ImagePyramid.jpeg){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+- Stockage et affichage efficaces de l'image (découpage efficace à des angles arbitraires).
+- Compatible avec [Fiji](https://github.com/saalfeldlab/n5-viewer), [Napari](https://github.com/ome/napari-ome-zarr), [ITK/VTK Viewer](https://kitware.github.io/itk-vtk-viewer/docs/index.html), [Neuroglancer](https://github.com/google/neuroglancer?tab=readme-ov-file), [Vizarr](https://github.com/hms-dbmi/vizarr), et [3D Cell Viewe](https://www.allencell.org/3d-cell-viewer.html) de l'Allen Institute.
+- Pour une conversion par lots vers OME-Zarr basée sur Conda, visitez [ce dépôt] (https://github.com/Euro-BioImaging/BatchConvert).
+- Traitez les ensembles de données OME-Zarr en Python en utilisant [cet outil](https://github.com/Euro-BioImaging/ome_zarr_pyramid).
+:::
+::::
+:::::
+
+## Message à emporter{.center}
+
+::: {style="text-align: center;font-size: 100%"}
+La [planification stratégique et la gestion des données]{style="color:green ;"}, les [plateformes et formats]{style="color:green ;"} adaptés à l'informatique en nuage et le soutien institutionnel garantissent des données d'imagerie extensibles, accessibles et [réutilisables]{style="text-decoration : underline ;"}.
+:::
+
+# Collecte des métadonnées de l'image
+
+## Aperçu général
+
+[Des métadonnées de haute qualité]{style=« color:green ; »} sont essentielles pour que les données d'imagerie soient **FAIR**.
+
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![Image de [DevianArt](https://www.deviantart.com/bonsaiartistry/art/Fragmented-Whispers-Abstract-Collage-Rhapsody-978347147)](images/Fragmented.png){fig-align="center" width="80%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+[Défis actuels :]{style="color:red ;"}
+
+- Un écosystème fragmenté [dépourvu de normes claires en matière de métadonnées]{style="color:red ;"} qui conduit à une documentation incohérente.
+- Les ~~revues scientifiques~~ et les institutions manquent de lignes directrices uniformes.
+:::
+::::
+:::::
+
+## Recommended Metadata for Biological Images [(REMBI)](https://www.nature.com/articles/s41592-021-01166-8){.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![Image de [Sarkans, et al. 2021](https://doi.org/10.1038/s41592-021-01166-8)](images/Rembi.webp){fig-align="center" width="70%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+REMBI donne des directives sur les métadonnées pour répondre aux besoins des diverses communautés de l'imagerie biomédicale. 
+
+Un modèle de résumé est disponible [ici](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx). 
+
+:::
+::::
+:::::
+
+## 
+
+::: {style="text-align: center;font-size: 80%"}
+![[Télécharger](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx) the template](images/Rembi.png){fig-align="center" width="60%"}
+:::
+
+## Utiliser le vocabulaire contrôlé{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+Utiliser le [vocabulaire contrôlé]{style="color:green ;"} (ontologies) pour spécifier les objets, leurs catégories et relations. 
+::::
+
+:::: {#second-column}
+::: {style="text-align: left; font-size: 80%"}
+| **Nom**             | **Ontologie**                                      |
+|---------------------|----------------------------------------------------|
+| Organismes          | [NCBI](https://www.ncbi.nlm.nih.gov/gene/)         |
+| Gènes               | [NCBI](https://www.ncbi.nlm.nih.gov/gene/)         |
+| Protéines           | [Uniprot](https://www.uniprot.org/)                |
+| Méthodes d'imagerie | [FBBI](https://www.ebi.ac.uk/ols4/ontologies/fbbi) | 
+| Facteurs d'exp.     | [EFO](https://www.ebi.ac.uk/ols4/ontologies/efo)   |
+:::
+::::
+:::::
+
+## 
+
+::: {style="text-align: center;font-size: 80%"}
+![[Service de recherche d'ontologie EMBL-EBI](https://www.ebi.ac.uk/ols4/)](images/OLS.png){fig-align="center" width="90%"}
+:::
+
+## Enregistrer les métadonnées des appareils d'imagerie{.center} 
+::: {style="text-align: center;font-size: 90%"}
+![MicroMeta App](images/MicroMetaApp.png){fig-align="center" width="70%"}
+:::
+
+Visitez le site [MicroMeta App](https://wu-bimac.github.io/MicroMetaApp.github.io/) and the associated [research article](https://www.nature.com/articles/s41592-021-01315-z)
+
+## Methods J2 PlugIn{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![Exemple de le [dépôt](https://github.com/ABIF-McGill/MethodsJ2?tab=readme-ov-file)] de MethodsJ2 (images/MethodsJ2.png){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+Le plugin MethodsJ2 Fiji [génère du texte]({style="color:green ;"}) pour le [matériel et les méthodes] de microscopie {style="text-decoration : underline ;"} en extrayant des informations des métadonnées (fichier MicroMeta App). Visitez ici le [dépôt GitHub](https://github.com/ABIF-McGill/MethodsJ2?tab=readme-ov-file) ou [l'article de recherche](https://www.nature.com/articles/s41592-021-01290-5) associé.
+:::
+::::
+:::::
+
+
+## OMERO : L'un des meilleurs choix{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![De [Kunis et al., 2021](https://www.nature.com/articles/s41592-021-01288-z)](images/Omero_Metadata.jpg){fig-align="center" width="100%"}
+:::
+::::
+
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+OMERO intègre [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) (MetaData Editor for microscopy), un outil qui permet d'explorer et d'éditer facilement les métadonnées des images.
+:::
+::::
+:::::
+
+## Métadonnées à prendre en considération{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesA.png){fig-align="center" width="90%"}
+:::
+::::
+
+:::: {#Second-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesB.png){fig-align="center" width="90%"}
+:::
+::::
+:::::
+
+## Nous devons aller vers :{.center}
+
+- Meilleure consolidation des [normes]{style="color:green ;"} de métadonnées.
+- Développement d'[outils]{style="color:green ;"} pour la collecte automatisée des métadonnées (y compris la collaboration avec les fabricants de microscopes).
+- Infrastructures de recherche et soutien de BioImaging pour un [enregistrement des métadonnées]{style="color:green ;"} adéquat.
+
+
+# Organiser et partager les données d'images
+
+## Les images peuvent se trouver à plusieurs endroits{.center} 
+
+::::: {layout-ncol="3"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![Ordinateur d'étudiants et de post-doctorants](images/Laptop.jpg){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+![Réseau d'instituts](images/Network.jpg){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#third-column}
+::: {style="text-align: center;font-size: 60%"}
+![Le nuage (Google drive)](images/Cloud.jpg){fig-align="center" width="100%"}
+:::
+::::
+:::::
+
+::: {style="text-align: left;font-size: 70%"}
+À terme, les images biomédicales (big data) peuvent représenter [téraoctets ou pentaoctets]{style="color:orange ;"}, ce qui dépasse la plupart des solutions standard de partage de fichiers.
+:::
+
+::: callout-tip
+Le stockage efficace des images nécessite une [infrastructure]{style="color:green ;"}, l'optimisation des [flux de traitement]{style="color:green ;"} et des [protocoles de partage normalisés]{style="color:green ;"}. 
+:::
+
+## Considérations relatives aux solutions de stockage{.center}
+Pour choisir la modalité de stockage, pensez qu'en tant que scientifique, nous ne voulons pas simplement stocker l'ensemble de données quelque part, nous voulons le rendre [accessible et utilisable]{style=« color:green ; »}. 
+
+::: callout-tip
+## Nous voulons que nos images soient
+- {{< bi search >}} Trouvables (identifiants persistants, indexées dans une ressource consultable)
+- {{< bi hdd-fill >}} Accessibles (Exigences logicielles, Formats de fichiers ouverts)
+- {{< bi diagram-2-fill >}} Interopérable (métadonnées riches, paramètres normalisés)
+- {{< bi recycle >}} Réutilisable (métadonnées descriptives, licence et droits d'utilisation clairs)
+:::
+
+## Où puis-je partager mes images ?{.center}
+
+::: {style="text-align: center;font-size: 80%"}
+![Exemples de référentiels généralistes](images/Repositories.png){width="100%"}
+:::
+
+## Caractéristiques de certains référentiels généralistes{.center}
+
+::: {style="text-align: center;font-size: 60%"}
+![De [Schmied. et al (2024)](https://www.nature.com/articles/s41592-023-01987-9/figures/7)](images/Repositories_Features.webp){width="100%"}
+:::
+
+
+## Référentiels d'images spécialisés{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![[Image Data Resource (IDR)](https://idr.openmicroscopy.org/) et son [schéma de métadonnées](https://github.com/IDR/idr-metadata)](images/Idr.png){width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){width="100%"}
+:::
+::::
+:::::
+
+
+## Autres solutions
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![[OMERO](https://www.openmicroscopy.org/omero/)](images/Omero.png){width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+![[IRODS](https://irods.org/)](images/Irods.png){width="100%"}
+:::
+::::
+:::::
+
+::: {style="text-align: left;font-size: 80%"}
+Ces instances sont installées dans un espace dédié du réseau (core facility) pour un stockage et un partage à long terme.
+:::
+
+## Caractéristiques des images partagées{.center}
+
+::: {style="text-align: left;font-size: 70%"}
+- Images [brutes]{style="color:orange ;"} et [traitées]{style="color:green ;"} (les opérations de traitement ne doivent pas altérer l'image originale).
+- Formats de fichiers ouverts [non compressés]{style=" color:green ; "} et [sans perte]{style=" color:green ; "}.
+- OME-TIFF conserve les métadonnées d'origine (.czi).
+- Le format PNG (images avec annotations) est préférable.
+- Conventions d'appellation précises et descriptives (lisibles par machine) {style=" color:green ; "} (par exemple, Subject_Group_Area_Marker) : Utilisez des facteurs de regroupement pour nommer les images.
+- Création de [fichiers README]{style=" color:green ; "} pour contextualiser et décrire le contenu et les méthodes utilisées dans l'ensemble de données. 
+- Utiliser les licences CC-BY ou CC0.
+:::
+
+::: callout-tip
+"We strongly discourage author statements that images ‘are available upon request’, as this has been shown to be inefficient" ([Schmied et al. 2023](https://www.nature.com/articles/s41592-023-01987-9))
+:::
+
+# Partage de flux de travail reproductibles
+
+## Traitement et analyse d'images{.center}
+
+Dans tout processus de recherche, l'analyse des images doit être :
+
+::::: {layout-ncol="3" layout-valign="center"}
+:::: {#first-column}
+### Objectif
+::: {style="text-align: center;font-size: 60%"}
+![](images/Objective.png){fig-align="center" width="70%"}
+:::
+::::
+
+:::: {#second-column}
+### Fiable
+::: {style="text-align: center;font-size: 60%"}
+![De https://nexxis.com.au/](images/Realible.webp){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#third-column}
+### Reproductible
+::: {style="text-align: center;font-size: 60%"}
+![De https://med.stanford.edu/](images/Replication.jpg){fig-align="center" width="100%"}
+:::
+::::
+:::::
+
+## L'analyse d'images du point de vue de la RDM {.center}
+
+Du point de vue de la RDM, l'analyse des images biomédicales implique idéalement :
+
+- {{< bi unlock >}} L'accès à de grands ensembles de données
+- {{< bi file-earmark-text-fill >}} Des enregistrements du traitement de l'image (code, scripts) 
+- {{< bi share-fill >}} Partage des résultats (images, tableaux, graphiques) 
+
+::: callout-tip
+Des [conventions de dénomination et fichiers README]{style=« color:green ; »} précis et descriptifs contenant des métadonnées ou des livres de code sont essentiels pour garantir l'intégrité des pipelines d'analyse.
+:::
+
+## Approche modulaire pour l'analyse d'images{.center}
+
+Un [flux d'analyse modulaire]{style=« color:green ; »} divise les principales tâches d'analyse d'images en sous tâches indépendantes.
+
+```{mermaid}
+%%| fig-width: 20
+%%| fig-height: 9
+
+flowchart LR
+A[Détection des nucléus] --> B[Quantification] 
+B --> C [Analyse spatiale]
+```
+
+::: callout-tip
+La modularité permet de [construire des flux d'analyse complexes]{style="color:green ;"} à partir de composants indépendants qui peuvent fonctionner ensemble. Cela favorise la [réutilisation]{style="text-decoration : underline ;"} de modules indépendants.
+:::
+
+## Hiérarchie des tâches d'analyse d'images {.center}
+
+::: {style="text-align: center;font-size: 60%"}
+![De [Driscoll, M & Zaritsky, A. (2021)](https://doi.org/10.1242/jcs.254292)](images/Hierarchy.jpg){fig-align="center" width="50%"}
+:::
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: left;font-size: 50%"}
+**Niveau bas (connaissances techniques)**
+
+Transformer des images en d'autres images ou données :
+
+- Prétraitement (par exemple, déconvolution, élimination du bruit)
+- Détection et segmentation d'objets (par exemple, cellules, organites intracellulaires)
+- Suivi des particules/objets 
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 50%"}
+**Niveau haut (connaissances disciplinaires)**
+
+Transformer les résultats des tâches de bas niveau en informations ayant une signification biologique : 
+
+- Visualisation des données 
+- Ajustement de modèles statistiques 
+- Inférence statistique et mesures de l'incertitude
+:::
+::::
+:::::
+
+
+## Flux de travail pour l'analyse d'images {.center}
+
+::: {style="text-align: center;font-size: 80%"}
+![De [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/Graph_Workflows.webp){width="80%"}
+:::
+
+## Donner la priorité aux logiciels ouverts/gratuits
+
+Il existe des dizaines d'options ouvertes/gratuites pour analyser les images scientifiques et partager des flux de travail reproductibles :
+
+::: {style="text-align: left;font-size: 80%"}
+- [Fiji](https://imagej.net/software/fiji/downloads)
+- [CellPose](https://www.cellpose.org/)
+- [Ilastik](https://www.ilastik.org/)
+- [OMERO](https://www.openmicroscopy.org/omero/)
+- [QuPath](https://qupath.github.io/) 
+- [Python](https://www.python.org/)
+- [Napari](https://napari.org/stable/)
+- [Galaxy]( https://imaging.usegalaxy.eu/) ou https://usegalaxy.eu/
+:::
+
+## Une grande ressource pour l'analyse d'images : BioImage{.center}
+
+[BioImage.IO](https://doi.org/10.1101/2022.06.07.495102) est un référentiel de modèles d'IA piloté par la communauté qui donne accès à des modèles d'IA pré-entraînés avec une pléthore de partenaires logiciels ouverts/gratuits. 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 80%"}
+![[BioImage](https://bioimage.io/)](images/BioImage.io.png){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#Second-column}
+::: {style="text-align: center;font-size: 80%"}
+![De Bioimage](images/BioImage_Examples.png){fig-align="center" width="100%"}
+:::
+::::
+:::::
+
+
+## Flux d'analyse d'images{.center}
+
+::::: {layout-ncol="3" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsA.png){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsB.png){fig-align="center" width="100%"}
+:::
+::::
+
+:::: {#third-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsC.png){fig-align="center" width="100%"}
+:::
+::::
+:::::
+
+## Pourquoi utiliser un code ?{.center}
+
+::: {style="text-align: center;font-size: 80%"}
+"La souris est antisociale. L'interface graphique est antisociale. Qu'est-ce que cela signifie ? Vous avez un problème à résoudre, et vous le résolvez avec une interface graphique. Qu'est-ce que vous avez ? Un problème résolu. Mais lorsque vous le résolvez avec une interface de ligne de commande dans un environnement de script, vous avez un [artefact]{style="color:green ;"}. Et tout à coup, cet artefact peut être partagé avec quelqu'un" **Jeffrey Snover**
+:::
+
+::: {style="text-align: center;font-size: 150%"}
+Utilisez le [CODE]{style="color:green ;"} et non [la souris]{style=" color:red ; "} !
+:::
+
+
+## Aperçu général{.center}
+
+::: callout-tip
+- Garder une trace de toutes les modifications et procédures d'analyse effectuées sur les images. 
+- Organiser et lier les fichiers (en utilisant des conventions de dénomination) tout au long du traitement afin d'éviter les erreurs.
+- Sélectionner les résultats finaux ou intermédiaires à partager en tenant compte d'aspects tels que l'espace de stockage et la conservation à long terme. 
+:::
+
+
+## Publication des résultats d'analyse{.center}
+
+Le partage des [objets de recherche]{style="color:green ;"} dans des référentiels publics et actifs de gestion de la recherche, comme l'[Open Science Framework (OSF)] (https://osf.io/), est une excellente stratégie pour promouvoir une science ouverte et reproductible. Veuillez envisager de partager les images d'illustration, les figures et les tableaux utilisés dans la publication.   
+
+::: callout-tip
+En général, il s'agit d'images/figures de faible résolution (.png) qui ne sont pas utilisées pour l'analyse mais pour l'illustration de rapports de recherche (thèses, articles).
+:::
+
+## Exemples d'images de résultats
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){width="100%"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"}
+Cliquez pour voir des exemples des [images](https://osf.io/mb257/) et [figures](https://osf.io/jxb4z/) de résultats publiés 
+:::
+::::
+:::::
+
+## Les données ne sont généralement pas partagées{.center}
+
+Les mentions « Les données sont disponibles sur demande » figurant dans les publications se révèlent souvent peu fiables dans la pratique ([Schmidt et al., 2024](https://onlinelibrary.wiley.com/doi/10.1111/jmi.13317)) 
+
+::: callout-tip
+## Principe de la science ouverte
+Partager les données aussi ouvertement que possible et les garder aussi fermées que nécessaire. 
+:::
+
+
+## {{< bi share-fill >}} Le partage des données est une responsabilité professionnelle{.center}
+
+Le dépôt d'un ensemble de données dans un référentiel n'est [PAS SEULEMENT]{style="color:red ;"} un exercice visant à répondre aux exigences des organismes de financement et des revues scientifiques. C'est une [responsabilité éthique et professionnelle]{style="color:green ;"} des chercheurs de garantir la reproductibilité de la science, ainsi que l'accès et la réutilisation des données scientifiques.
+
+
+## Par conséquent, la recherche doit évoluer vers: {.center} 
+
+- Des chercheurs [compétents]{style=" color:green ; "} en [gestion et l'analyse des données]{style=" text-decoration : underline ; "}. 
+- Des [approches normalisées]{style=" color:green ; "} pour [partager]{style=" text-decoration : underline ; "} les données brutes et le code d'analyse pour étayer les résultats de la recherche.
+- Des chercheurs qui [s'engagent à la transparence]{style=" color:green ; "} et aux meilleures pratiques scientifiques pour garantir [l'intégrité de la recherche]{style=" text-decoration : underline ; "}.
+
+
+## {.center}
+
+::: {style="text-align: center;font-size: 100%"}
+![Visitez [FRDR](https://www.frdr-dfdr.ca/repo/) ou [Borealis](https://borealisdata.ca/)](images/Repositories_Logo.png){fig-align="center" width="1000" height="220"}
+:::
+
+
+------------------------------------------------------------------------
+
+## Ressources et soutien {.smaller}
+
+### Matériel d'appui
+
+-   [Documentation DFDR](https://www.frdr-dfdr.ca/docs/en/depositing_data/)
+-   [Guide d'utilisation de Borealis](https://borealisdata.ca/guides/en/latest/user/)
+-   [Ressources de formation](https://alliancecan.ca/en/services/research-data-management/learning-and-training/training-resources) from the Alliance 
+
+### Services de soutien :
+
+Contactez-nous pour vous assurer que vos données sont bien préparées et qu'elles peuvent être partagées efficacement avec la communauté des chercheurs.
+
+- Courriel : rdm-gdr\@alliancecan.ca
+- https://www.frdr-dfdr.ca/repo/

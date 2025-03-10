@@ -54,33 +54,29 @@ editor: source
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
-::: {style="text-align: center;font-size: 60%"}
-![Mouse brain image by Daniel Manrique](images/BrainStaining.png){fig-align="center" width="100%"}
+::: {style="text-align: center;font-size: 80%"}
+![Henning Falk (2022) - NumFOCUS](images/DataTheraphy.png){fig-align="center" width="65%"}
 :::
 ::::
 
 :::: {#second-column}
-::: {style="text-align: center;font-size: 60%"}
-![Henning Falk (2022) - NumFOCUS](images/DataTheraphy.png){fig-align="center" width="65%"}
+::: {style="text-align: center;font-size: 80%"}
+Bioimaging has entered the realm of big data comprising [increasingly complex datasets]{style="color:green;"}. We face numerous challenges, specifically, proper [data handling]{style="text-decoration: underline;"} and [management]{style="text-decoration: underline;"} and the creation and sharing of [reproducible image analysis]{style="text-decoration: underline;"} workflows.
 :::
 ::::
 :::::
-
-## What's the current challenge?{.center}
-
-Bioimaging has entered the realm of big data comprising [increasingly complex datasets]{style="color:green;"}. We face numerous challenges, specifically, proper [data handling]{style="text-decoration: underline;"} and [management]{style="text-decoration: underline;"} and the creation and sharing of [reproducible image analysis]{style="text-decoration: underline;"} workflows.
 
 ## BioImage Life cicle
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
-::: {style="text-align: center;font-size: 60%"}
+::: {style="text-align: center;font-size: 80%"}
 ![BioImage life cycle from [Schmidt, et al. 2024](https://doi.org/10.1111/jmi.13317)](images/ImageLifeCycle.jpg){fig-align="center" width="80%"}
 :::
 ::::
 
 :::: {#second-column}
-::: {style="text-align: left;font-size: 80%"}
+::: {style="text-align: left;font-size: 90%"}
 BioImages have the potential for scientific discovery beyond its original acquisition purpose when handled according to [FAIR principles]{style="color:green;"} ([Schmidt, et al. 2024](https://onlinelibrary.wiley.com/doi/10.1111/jmi.13317); see [Wilkinson, et al. 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC4792175/)).
 :::
 ::::
@@ -113,7 +109,7 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 ::::
 :::::
 
-## Planning an imaging experimet{.center}  
+## Planning imaging experiments{.center}  
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -125,7 +121,7 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 ::::
 
 :::: {#second-column}
-### {{< bi database-fill >}} Imaging storage
+### {{< bi database-fill >}} storage of images
 ::: {style="text-align: left;font-size: 80%"}
 -   Image size - Gigas or terabytes
 -   Image complexity - Single or multiple focal planes, Live or time-lapse images
@@ -342,6 +338,22 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 ::::
 :::::
 
+## Metadata to consider{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesA.png){fig-align="center" width="90%"}
+:::
+::::
+
+:::: {#Second-column}
+::: {style="text-align: center;font-size: 60%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesB.png){fig-align="center" width="90%"}
+:::
+::::
+:::::
+
 ## We need to move toward:{.center}
 
 - Better consolidation of metadata [standards]{style="color:green;"}.
@@ -373,12 +385,15 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 ::::
 :::::
 
+::: {style="text-align: left;font-size: 70%"}
+Eventually, biomedical images (big data) can reach [terabytes or pentabytes]{style="color:orange;"} in size, exceeding most standard file-sharing solutions.
+:::
 
-## Current landscape: {.center}
-
+::: callout-tip
 Effective image storage requires [infrastructure]{style="color:green;"}, optimization of [processing workflows]{style="color:green;"}, and [standardized]{style="color:green;"} sharing protocols. 
+:::
 
-## 
+## Considerations for storage solutions{.center}
 For selecting the storage modality, think that, as scientist, we do not want simply to store the dataset somewhere, we want to make it [accessible and usable]{style="color:green;"}. 
 
 ::: callout-tip
@@ -388,27 +403,6 @@ For selecting the storage modality, think that, as scientist, we do not want sim
 - {{< bi diagram-2-fill >}} Interoperable (rich metadata, standardized parameters)
 - {{< bi recycle >}} Reusable (descriptive metadata, Clear license and usage rights)
 :::
-
-::: callout-warning
-Eventually, biomedical images (big data) can reach terabytes or pentabytes in size, exceeding most standard file-sharing solutions
-:::
-
-
-## Metadata to consider{.center}
-
-::::: {layout-ncol="2" layout-valign="center"}
-:::: {#first-column}
-::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesA.png){fig-align="center" width="90%"}
-:::
-::::
-
-:::: {#Second-column}
-::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesB.png){fig-align="center" width="90%"}
-:::
-::::
-:::::
 
 ## Where do I share my images?{.center}
 
@@ -445,7 +439,7 @@ Eventually, biomedical images (big data) can reach terabytes or pentabytes in si
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[OMERO (IDR)](https://www.openmicroscopy.org/omero/)](images/Omero.png){width="100%"}
+![[OMERO](https://www.openmicroscopy.org/omero/)](images/Omero.png){width="100%"}
 :::
 ::::
 
@@ -514,7 +508,7 @@ From an RDM perspective, analysis of biomedical images ideally entails:
 - {{< bi share-fill >}} Sharing of results (images, tables, graphs) 
 
 ::: callout-tip
-Accurate, descriptive [naming conventions and README]{style="color:green;"} files with metadata, or spreadsheets are vital to assure the integrity of analysis pipelines. 
+Accurate, descriptive [naming conventions and README]{style="color:green;"} files with metadata, or codebooks are vital to assure the integrity of analysis pipelines. 
 :::
 
 ## Modular approach for image analysis{.center}
