@@ -13,7 +13,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Sharing images and workflows - Daniel Manrique-Castano, Ph.D"
+    footer: "Sharing images and reproducible workflows - FRDR curation team"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
@@ -47,7 +47,7 @@ editor: source
 ## 
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/ImagingSamples.jpg){fig-align="center" width="100%"}
+![](images/ImagingSamples.jpg){fig-alt="A diagram illustrating different types of biological imaging techniques and their applications. The top section, labeled 'Sample Imaging,' includes icons representing various scientific fields such as molecular biology, genetics, microbiology, and anatomy. Below, three imaging modalities are depicted: 'Electron microscopy' (in light blue), 'Light microscopy' (in dark blue), and 'Human bioimaging' (in dark red), indicating their areas of application. At the bottom, 'Image data analysis' is shown, emphasizing the computational aspect of image processing. The diagram highlights the role of imaging across multiple scientific disciplines." fig-align="center" width="100%"}
 :::
 
 ## Images contain countless data{.center}
@@ -55,12 +55,12 @@ editor: source
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![Henning Falk (2022) - NumFOCUS](images/DataTheraphy.png){fig-align="center" width="65%"}
+![Henning Falk (2022) - NumFOCUS](images/DataTheraphy.png){fig-alt="A black-and-white cartoon illustration depicting a therapy session. A patient is lying on a couch, expressing their concerns to a therapist who is taking notes. The patient has a thought bubble showing a massive wave labeled 'DATA' about to crash over a small, helpless figure. The cartoon humorously represents the overwhelming feeling of dealing with large amounts of data, a common challenge in research and data science. The drawing is signed by Henning Falk." fig-align="center" width="65%"}
 :::
 ::::
 
 :::: {#second-column}
-::: {style="text-align: center;font-size: 80%"}
+::: {style="text-align: left;font-size: 80%"}
 Bioimaging has entered the realm of big data comprising [increasingly complex datasets]{style="color:green;"}. We face numerous challenges, specifically, proper [data handling]{style="text-decoration: underline;"} and [management]{style="text-decoration: underline;"} and the creation and sharing of [reproducible image analysis]{style="text-decoration: underline;"} workflows.
 :::
 ::::
@@ -71,7 +71,7 @@ Bioimaging has entered the realm of big data comprising [increasingly complex da
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![BioImage life cycle from [Schmidt, et al. 2024](https://doi.org/10.1111/jmi.13317)](images/ImageLifeCycle.jpg){fig-align="center" width="80%"}
+![BioImage life cycle from [Schmidt, et al. 2024](https://doi.org/10.1111/jmi.13317)](images/ImageLifeCycle.jpg){fig-alt="A circular diagram illustrating the bioimaging research data management (RDM) lifecycle, titled 'Core Facility: Infrastructure and Bioimaging RDM Support.' At the center, a researcher icon represents the user interacting with different stages of the workflow. The lifecycle is divided into segments: 'Image Acquisition' (purple), 'Image File Storage & Access' (yellow), 'Processing & Bioimage Analysis' (green), '(Data-) Publication' (blue), 'Archiving, Long-Term Storage' (light gray), and 'Planning, Data Search & Re-use' (gray). Around the outer circle, key supporting infrastructure elements are represented, including cloud storage, file system storage, efficient data transfer, formats, standards, tools, permission systems, data security, web access, connectivity, and data integration. The diagram highlights the structured approach to managing and supporting bioimaging research data." fig-align="center" width="80%"}
 :::
 ::::
 
@@ -93,7 +93,7 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![](images/Overcapacity.png){fig-align="center" width="80%"}
+![](images/Overcapacity.png){fig-alt="A screenshot of the Windows File Explorer 'This PC' section, displaying storage devices and their available disk space. The image highlights two key areas: (1) the 'This PC' navigation option on the left panel, and (2) the 'Devices and drives' section, showing multiple hard drives and partitions, some nearly full with red-colored storage bars. This image illustrates disk space management challenges and overcapacity warnings in Windows." fig-align="center" width="80%"}
 :::
 ::::
 
@@ -151,13 +151,13 @@ During imaging it is necessary to consider a compromise between the [parameters]
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![8 bit image - Courtesy of Daniel Manrique-Castano](images/Image_8bit.png){width="100%"}
+![8 bit image - Courtesy of Daniel Manrique-Castano](images/Image_8bit.png){fig-alt="A fluorescence microscopy image of a coronal mouse brain section displayed in an image viewer. The image is captured from a `.czi` file and shown as an 8-bit TIFF format with a size of 23MB. The fluorescence signal appears in green, highlighting specific structures within the brain tissue. The metadata in the image viewer indicates dimensions of 9086.62 x 7290.43 microns, corresponding to a resolution of 2752 x 2208 pixels. This type of imaging is commonly used in neuroscience research to visualize protein expression, cellular structures, or anatomical regions." width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![16 bit image - Courtesy of Daniel Manrique-Castano](images/Image_16bit.png){width="100%"}
+![16 bit image - Courtesy of Daniel Manrique-Castano](images/Image_16bit.png){fig-alt="The image shows the same as the left one for a 16-bit depth." width="100%"}
 :::
 ::::
 :::::
@@ -165,7 +165,7 @@ During imaging it is necessary to consider a compromise between the [parameters]
 ## Consider that...{.center}
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/Microscope.jpeg){fig-align="center" width="100%"}
+![](images/Microscope.jpeg){fig-alt="A humorous science-themed illustration combining text and a drawing of a microscope. On the left side, bold black text reads 'BRO, DO YOU EVEN SCOPE?' with an illustration of a compound microscope below it. On the right side, within a light blue background, the text emphasizes the importance of training in microscopy: 'A microscope is as good as the person that operates it. Experiment quality can be boosted with training.' The words 'microscope' and 'Experiment quality' are highlighted in blue. The image humorously promotes proper training for obtaining high-quality scientific results using microscopes." fig-align="center" width="100%"}
 :::
 
 ## Transforming file formats {.center}
@@ -175,13 +175,13 @@ After acquiring original images in [proprietary formats]{style="color:red;"} (i.
 ::::: {layout-nrow="2" layout-valign="center"}
 :::: {#first-row}
 ::: {style="text-align: center;font-size: 70%"}
-![Bio-Formats from [Open Microscopy Environment](https://www.openmicroscopy.org/bio-formats/downloads/) (compatible with [FIJI](https://imagej.net/formats/bio-formats))](images/Bioformats-Omero.png){fig-align="center" width="70%"}
+![Bio-Formats from [Open Microscopy Environment](https://www.openmicroscopy.org/bio-formats/downloads/) (compatible with [FIJI](https://imagej.net/formats/bio-formats))](images/Bioformats-Omero.png){fig-alt="A screenshot of the Bio-Formats 8.1.0 download page, a software tool for reading and converting life sciences image file formats. The background contains a fluorescence microscopy image of cells stained with blue, green, and yellow markers. The main heading, 'Bio-Formats 8.1.0 Downloads,' is displayed in large white text. Bio-Formats is an essential tool for researchers working with multidimensional microscopy data." fig-align="center" width="70%"}
 :::
 ::::
 
 :::: {#second-row}
 ::: {style="text-align: center;font-size: 70%"}
-![Bio-Formats for [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-align="center" width="70%"}
+![Bio-Formats for [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-alt="A screenshot of the 'python-bioformats 4.1.0' package release page. The page has a blue background and prominently displays the package name and version. Below, a command snippet shows how to install the package using pip: 'pip install python-bioformats,' with a copy button next to it. This package enables Python users to work with Bio-Formats, a library for reading and processing scientific image data." fig-align="center" width="70%"}
 :::
 ::::
 :::::
@@ -201,7 +201,7 @@ Is a format developed by the [Open Microscopy Environment (OME)](https://www.ope
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Image Pyramid](images/ImagePyramid.jpeg){fig-align="center" width="100%"}
+![Image Pyramid](images/ImagePyramid.jpeg){fig-alt="A schematic illustration of an image pyramid, a concept used in image processing and bioimaging. The pyramid represents different resolution levels of the same image, with a pink-stained brain tissue sample shown at each level. The base of the pyramid represents 'Full resolution, Full area,' while the middle and upper levels correspond to '1/2 resolution, 1/4 area' and '1/4 resolution, 1/16 area,' respectively. This visualization highlights how images are stored at multiple scales to optimize processing and analysis in whole-slide imaging and multi-resolution microscopy." fig-align="center" width="100%"}
 :::
 ::::
 
@@ -231,7 +231,7 @@ Strategic [planing and data management]{style="color:green;"}, cloud-ready [plat
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![Image from [DevianArt](https://www.deviantart.com/bonsaiartistry/art/Fragmented-Whispers-Abstract-Collage-Rhapsody-978347147)](images/Fragmented.png){fig-align="center" width="80%"}
+![Image from [DevianArt](https://www.deviantart.com/bonsaiartistry/art/Fragmented-Whispers-Abstract-Collage-Rhapsody-978347147)](images/Fragmented.png){fig-alt="A vibrant abstract digital artwork featuring a fragmented human face interwoven with geometric shapes, colorful textures, and technological elements. The composition includes a large, expressive eye surrounded by streaks of color, circuits, and intersecting lines. Additional elements, such as a stylized mouth and curved, ribbon-like structures, contribute to the surreal aesthetic." fig-align="center" width="80%"}
 :::
 ::::
 
@@ -250,13 +250,13 @@ Strategic [planing and data management]{style="color:green;"}, cloud-ready [plat
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![Image from [Sarkans, et al. 2021](https://doi.org/10.1038/s41592-021-01166-8)](images/Rembi.webp){fig-align="center" width="70%"}
+![Image from [Sarkans, et al. 2021](https://doi.org/10.1038/s41592-021-01166-8)](images/Rembi.webp){fig-alt="A Venn diagram illustrating the overlapping metadata needs of different research domains. The three primary categories are 'Research biologist’s needs' (blue), 'Computer vision researcher’s needs' (green), and 'Imaging scientist’s needs' (yellow). Their intersection highlights the 'Recommended metadata,' which serves as a standardized set of information beneficial across these disciplines." fig-align="center" width="70%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 80%"}
-REMBI advice metadata guidelines to address the needs of diverse biomedical imaging communities. 
+**REMBI** advice metadata guidelines to address the needs of diverse biomedical imaging communities. 
 
 A summary template is available [here](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx). 
 
@@ -267,7 +267,7 @@ A summary template is available [here](https://github.com/Alliance-RDM-GDR/RDM_B
 ## 
 
 ::: {style="text-align: center;font-size: 80%"}
-![[Download](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx) the template](images/Rembi.png){fig-align="center" width="60%"}
+![[Download](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx) the template](images/Rembi.png){fig-alt="A structured table outlining the different metadata modules required for standardized bioimaging data documentation. The table consists of several sections: 'Study,' 'Study Component,' 'Biosample,' 'Specimen,' 'Image Acquisition,' 'Image Data,' 'Image Correlation,' and 'Analyzed Data.' Each row specifies an attribute (e.g., study type, imaging method, biological entity), a description of its significance, the data entry method (text, ontology, extracted data), and related ontologies (such as EDAM-BIOIMAGING, FBbi, OME, and EFO). This table highlights essential metadata elements needed to ensure reproducibility, interoperability, and structured data sharing in bioimaging research." fig-align="center" width="60%"}
 :::
 
 ## Use controlled vocabulary{.center}
@@ -293,12 +293,12 @@ Use [controlled vocabulary]{style="color:green;"} (ontologies) to specify object
 ## 
 
 ::: {style="text-align: center;font-size: 80%"}
-![[EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/)](images/OLS.png){fig-align="center" width="90%"}
+![[EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/)](images/OLS.png){fig-alt="Screenshot of the EMBL-EBI Ontology Lookup Service (OLS) homepage. The interface provides a search bar for finding biomedical ontology terms, with options to filter by exact match, include obsolete terms, and include imported terms. Below, there are three sections: 'About OLS,' describing its function as a repository for biomedical ontologies; 'Related Tools,' mentioning additional ontology mapping services like OxO and ZOOMA; and 'Report an Issue,' directing users to a GitHub issue tracker for feedback and ontology requests." fig-align="center" width="90%"}
 :::
 
 ## Record metadata from imaging devices{.center} 
 ::: {style="text-align: center;font-size: 90%"}
-![MicroMeta App](images/MicroMetaApp.png){fig-align="center" width="70%"}
+![MicroMeta App](images/MicroMetaApp.png){fig-alt="Screenshot of the Micro Meta App, a microscopy metadata management tool. The top section displays the app's banner with the title 'MICRO META APP' and the tagline 'Microscopy Metadata for the Real World.' Below, two main sections allow users to 'Manage Instrument' and 'Manage Settings,' providing options to document hardware components and acquisition settings. The lower half of the image shows detailed interface views, including labeled microscope components such as objectives, cameras, filter sets, and laser settings, highlighting metadata fields like manufacturer, gain, magnification, and bit depth." fig-align="center" width="70%"}
 :::
 
 Visit the [MicroMeta App](https://wu-bimac.github.io/MicroMetaApp.github.io/) and the associated [research article](https://www.nature.com/articles/s41592-021-01315-z)
@@ -308,7 +308,7 @@ Visit the [MicroMeta App](https://wu-bimac.github.io/MicroMetaApp.github.io/) an
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![Example from MethodsJ2 [repository](https://github.com/ABIF-McGill/MethodsJ2?tab=readme-ov-file)](images/MethodsJ2.png){fig-align="center" width="100%"}
+![Example from MethodsJ2 [repository](https://github.com/ABIF-McGill/MethodsJ2?tab=readme-ov-file)](images/MethodsJ2.png){fig-alt="Screenshot of a text document generated using the MethodsJ2 tool based on user input and a Micro-Meta App hardware file. The document details the imaging setup, including a Zeiss Axiovert 200M inverted microscope configured for Widefield Epifluorescence microscopy, controlled with Zen software. The text specifies the optical components, imaging parameters such as voxel size (0.14 μm), and details of fluorescence excitation using an X-Cite 120 LED light source with various excitation/emission filters and dichroic mirrors. The acknowledgments section credits the Advanced BioImaging Facility (ABIF) at McGill and Joel Ryan for assistance." fig-align="center" width="100%"}
 :::
 ::::
 
@@ -326,7 +326,7 @@ The MethodsJ2 Fiji plugIn [generates text]({style="color:green;"}) for microscop
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![From [Kunis et al., 2021](https://www.nature.com/articles/s41592-021-01288-z)](images/Omero_Metadata.jpg){fig-align="center" width="100%"}
+![From [Kunis et al., 2021](https://www.nature.com/articles/s41592-021-01288-z)](images/Omero_Metadata.jpg){fig-alt="Diagram illustrating the workflow of metadata handling in OMERO, from image acquisition on a microscope to metadata import and annotation. The process involves vendor image containers being imported via the OMERO importer, where metadata is extracted using Bio-Formats. Metadata is structured following facility specifications and ontology standards. The OMERO.mde system organizes metadata into structured key-value pairs, enabling visualization, annotation, and export in formats such as .txt, .tsv, and .csv for reuse in IDR format." fig-align="center" width="100%"}
 :::
 ::::
 
@@ -343,13 +343,13 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesA.png){fig-align="center" width="90%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesA.png){fig-alt="Checklist for image publishing, covering aspects of image format and image colors/channels. The checklist includes requirements for focusing on relevant content (cropping, rotation, resizing), separating individual images, and providing example images for quantification. It also emphasizes annotation visibility, brightness/contrast adjustments, consistent image comparisons, and color accessibility for color-blind individuals. Recommended steps include adding grayscale versions, intensity scales, and adjustments like gamma correction and pseudocoloring." fig-align="center" width="90%"}
 :::
 ::::
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesB.png){fig-align="center" width="90%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_ImagesB.png){fig-alr="Checklist for image annotation and availability. This section highlights the importance of including scale information (such as scale bars and image length in figure legends), explaining all annotations, ensuring legibility of annotations (line width, size, color), and ensuring that annotations do not obscure key data. It also recommends adding relevant imaging details like pixel size, time intervals, and exposure time.The image availability section suggests sharing images with lossless compression, making image files freely downloadable in public databases, and storing them in dedicated image archives." fig-align="center" width="90%"}
 :::
 ::::
 :::::
@@ -368,19 +368,19 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 ::::: {layout-ncol="3"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Laptop of students and postdocs](images/Laptop.jpg){fig-align="center" width="100%"}
+![Laptop of students and postdocs](images/Laptop.jpg){fig-alt="A laptop with a black screen placed on a wooden table in a café setting. A cup of coffee on a saucer is next to it. The background has a wire mesh window with plants visible outside. " fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Institute network](images/Network.jpg){fig-align="center" width="100%"}
+![Institute network](images/Network.jpg){fig-alt="A close-up of a network switch with multiple Ethernet cables plugged in. The cables are orange and blue, neatly organized and connected to the switch. A label with the text 'NorthC' is visible on the top right corner of the device. " fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#third-column}
 ::: {style="text-align: center;font-size: 60%"}
-![The cloud (Google drive)](images/Cloud.jpg){fig-align="center" width="100%"}
+![The cloud (Google drive)](images/Cloud.jpg){fig-alt="A serene view of the sky filled with soft, fluffy white clouds stretching across the horizon. The upper part of the image shows a gradient of blue, transitioning from deep to light as it meets the clouds." fig-align="center" width="100%"}
 :::
 ::::
 :::::
@@ -407,13 +407,13 @@ For selecting the storage modality, think that, as scientist, we do not want sim
 ## Where do I share my images?{.center}
 
 ::: {style="text-align: center;font-size: 80%"}
-![Examples of generalist repositories](images/Repositories.png){width="100%"}
+![Examples of generalist repositories](images/Repositories.png){fig-alt="A collection of logos representing various research data repositories, including OSF, Dryad, FRDR, DFDR, BioStudies, Zenodo, and Borealis. These repositories support open science by providing platforms for data sharing and preservation." width="100%"}
 :::
 
 ## Features of some generalist repositories{.center}
 
 ::: {style="text-align: center;font-size: 60%"}
-![From [Schmied. et al (2024)](https://www.nature.com/articles/s41592-023-01987-9/figures/7)](images/Repositories_Features.webp){width="100%"}
+![From [Schmied. et al (2024)](https://www.nature.com/articles/s41592-023-01987-9/figures/7)](images/Repositories_Features.webp){fig-alt="Comparison table of various research data repositories including Zenodo, Figshare, Dryad, Bioimage Archive, Image Data Repository, Broad Bioimage Benchmark Collection, and The Cell Painting Gallery. The table details repository URLs, qualifications, support for non-image data, size limits, costs, and metadata requirements.  " width="100%"}
 :::
 
 
@@ -422,13 +422,13 @@ For selecting the storage modality, think that, as scientist, we do not want sim
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[Image Data Resource (IDR)](https://idr.openmicroscopy.org/) and its [metadata scheme](https://github.com/IDR/idr-metadata)](images/Idr.png){width="100%"}
+![[Image Data Resource (IDR)](https://idr.openmicroscopy.org/) and its [metadata scheme](https://github.com/IDR/idr-metadata)](images/Idr.png){fig-alt="Screenshot of the Image Data Resource (IDR) webpage, a public repository of bio-image datasets from scientific studies. The interface shows options to search for datasets, filter by type, and access specific studies. The image highlights statistics such as 132 studies, over 14 million images, and 411 TB of data, with a grid preview of available microscopy images." width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){width="100%"}
+![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){fig-alt="Screenshot of the BioImage Archive website, a free online repository for biological images. The page describes the archive's role in storing and distributing imaging data from various modalities, provided they are linked to a peer-reviewed publication or have significant scientific value. It highlights submission policies, integration with other bioimaging databases like EMPIAR and IDR, and adherence to FAIR and REMBI guidelines. The right panel features additional resources, including a quick tutorial and a promotional banner." width="100%"}
 :::
 ::::
 :::::
@@ -439,13 +439,13 @@ For selecting the storage modality, think that, as scientist, we do not want sim
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[OMERO](https://www.openmicroscopy.org/omero/)](images/Omero.png){width="100%"}
+![[OMERO](https://www.openmicroscopy.org/omero/)](images/Omero.png){fig-alt="Screenshot of the OMERO website homepage. The page features a dark-themed background with fluorescence microscopy images of cells. The OMERO logo is centered, followed by a description stating that OMERO is a secure central repository for managing, analyzing, and sharing microscopy images. It highlights compatibility with over 150 image file formats and supports access via desktop applications, web, or third-party software. A red button labeled 'Download Version 5.6' is prominently displayed." width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[IRODS](https://irods.org/)](images/Irods.png){width="100%"}
+![[IRODS](https://irods.org/)](images/Irods.png){fig-alt="Screenshot of the iRODS website homepage. The page has a green background and presents iRODS as an open-source data management software. A circular diagram in the center highlights key iRODS capabilities, including Automated Ingest, Storage Tiering, Compliance, Publishing, Provenance, Integrity, Auditing, and Indexing. A 'Download iRODS' button is visible at the bottom." width="100%"}
 :::
 ::::
 :::::
@@ -480,21 +480,21 @@ In any research workflow, the analysis of images must be:
 :::: {#first-column}
 ### Objective
 ::: {style="text-align: center;font-size: 60%"}
-![](images/Objective.png){fig-align="center" width="70%"}
+![](images/Objective.png){fig-alt="Illustration of a book with a magnifying glass placed over it. The book has a yellow cover with a label on the top, and the magnifying glass has a red rim with a blue lens, symbolizing research, analysis, or study." fig-align="center" width="70%"}
 :::
 ::::
 
 :::: {#second-column}
 ### Reliable
 ::: {style="text-align: center;font-size: 60%"}
-![From https://nexxis.com.au/](images/Realible.webp){fig-align="center" width="100%"}
+![From https://nexxis.com.au/](images/Realible.webp){fig-alt="Close-up of a metallic carabiner with the word 'RELIABILITY' engraved on it. The carabiner is securely fastened with a golden locking mechanism and is attached to a strong fabric strap." fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#third-column}
 ### Reproducible
 ::: {style="text-align: center;font-size: 60%"}
-![From https://med.stanford.edu/](images/Replication.jpg){fig-align="center" width="100%"}
+![From https://med.stanford.edu/](images/Replication.jpg){fig-alt="Illustration of a scientist in a white lab coat painting on a canvas, which contains an image of himself painting on a canvas in an infinite recursive loop. The background is red, creating a striking contrast. The artwork symbolizes scientific replication, self-referential processes, and the iterative nature of research. " fig-align="center" width="100%"}
 :::
 ::::
 :::::
@@ -531,7 +531,7 @@ Modularity allows to [construct complex analysis pipelines]{style="color:green;"
 ## Hierarchy of image analysis tasks {.center}
 
 ::: {style="text-align: center;font-size: 60%"}
-![From [Driscoll, M & Zaritsky, A. (2021)](https://doi.org/10.1242/jcs.254292)](images/Hierarchy.jpg){fig-align="center" width="50%"}
+![From [Driscoll, M & Zaritsky, A. (2021)](https://doi.org/10.1242/jcs.254292)](images/Hierarchy.jpg){fig-alt="Diagram illustrating the hierarchy of image processing in biological research. The first section (A) differentiates between low-level signal-driven processes, such as filtering, segmentation, tracking, and registration, which generate outputs that are not directly interpretable, and high-level biology-driven processes like statistical analysis, inference, visualization, and categorization, which produce interpretable outputs. The second section (B) presents a workflow starting from image registration, followed by segmentation, tracking, filtering, and analysis, leading to visualization and interpretation." fig-align="center" width="50%"}
 :::
 
 ::::: {layout-ncol="2" layout-valign="center"}
@@ -564,7 +564,7 @@ Transform outputs from low-level tasks into information with biological meaning:
 ## Image analysis workflow {.center}
 
 ::: {style="text-align: center;font-size: 80%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/Graph_Workflows.webp){width="80%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/Graph_Workflows.webp){fig-alt="Diagram illustrating different image analysis workflows in biological research. The left panel shows microscopy images as input. The central panel presents three types of workflows: (a) an established workflow using predefined methods such as SynAct for synaptic activity analysis, (b) a new workflow composed of multiple processing steps like scripts, macros, pipelines, or plugins, and (c) a machine learning workflow utilizing neural networks for image classification. The right panel displays different outputs, including fluorescence intensity plots over time, segmented images, and classification counts." width="80%"}
 :::
 
 ## Prioritize open/free software
@@ -589,13 +589,13 @@ There are dozens of open/free options to analyze scientific images and share rep
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 80%"}
-![[BioImage](https://bioimage.io/)](images/BioImage.io.png){fig-align="center" width="100%"}
+![[BioImage](https://bioimage.io/)](images/BioImage.io.png){fig-alt="Screenshot of the BioImage.IO website, showcasing the BioImage Model Zoo. The site offers access to advanced AI models for bioimage analysis with one-click integration. The page highlights compatibility with Fiji, ilastik, and ImJoy, and features a button labeled 'Explore the Zoo.' At the bottom, logos of community partners are displayed. The background contains a blue gradient with a stylized giraffe, trees, and animals." fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 80%"}
-![From Bioimage](images/BioImage_Examples.png){fig-align="center" width="100%"}
+![From Bioimage](images/Bioimage_Examples.png){fig-alt="Screenshot of the BioImage Model Zoo, displaying multiple AI models for bioimage segmentation and analysis. Each model has a thumbnail, title, description, tags, and download count. Some models focus on nucleus, cell, and mitochondria segmentation using different deep learning techniques. The interface features icons for compatibility, licensing, and additional functionalities." fig-align="center" width="100%"}
 :::
 ::::
 :::::
@@ -606,19 +606,19 @@ There are dozens of open/free options to analyze scientific images and share rep
 ::::: {layout-ncol="3" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsA.png){fig-align="center" width="100%"}
+![](images/CheckList_WorkflowsA.png){fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsB.png){fig-align="center" width="100%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsB.png){fig-alt="Checklist for the publication of image-analysis workflows, divided into three categories: established workflows, new workflows, and machine learning workflows. Each category lists criteria such as citation of workflow or platform, inclusion of example data, manual region of interest (ROI), exact version, public availability, rationale, and limitations. The checklist includes recommendations for minimal, recommended, and ideal documentation standards.  " fig-align="center" width="100%"}
 :::
 ::::
 
 :::: {#third-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_WorkflowsC.png){fig-align="center" width="100%"}
+![](images/CheckList_WorkflowsC.png){fig-align="center" width="100%"}
 :::
 ::::
 :::::
@@ -656,7 +656,7 @@ In general, these are lower resolution images/figures (.png) not used for analys
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){width="100%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){fig-alt="Guidelines for scientific image presentation, illustrating best practices for clarity and accuracy. Sections include: (a) focusing on relevant image content through cropping and resizing, (b) separating individual images, (c) indicating the origin of insets, (d) adjusting brightness and contrast appropriately, (e) ensuring channel annotations are visible against the background, (f) using grayscale channels to improve visibility of features, and (g) explaining channel values with calibration scales and indicators. " width="100%"}
 :::
 ::::
 
@@ -691,7 +691,7 @@ Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exerci
 ## {.center}
 
 ::: {style="text-align: center;font-size: 100%"}
-![Visit [FRDR](https://www.frdr-dfdr.ca/repo/) or [Borealis](https://borealisdata.ca/)](images/Repositories_Logo.png){fig-align="center" width="1000" height="220"}
+![Visit [FRDR](https://www.frdr-dfdr.ca/repo/) or [Borealis](https://borealisdata.ca/)](images/Repositories_Logo.png){fig-alt="Logos of two Canadian research data repositories: FRDR (Federated Research Data Repository) and Borealis. The FRDR logo features a geometric pattern of yellow squares forming a diamond shape, with the repository name in black and gold text. The Borealis logo includes an artistic depiction of the Northern Lights over mountains and a lake, with the repository name in bold white text. " fig-align="center" width="1000" height="220"}
 :::
 
 
@@ -699,15 +699,28 @@ Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exerci
 
 ## Resources and support {.smaller}
 
+::::: {layout-ncol="2"}
+:::: {#first-column}
 ### Supporting material
 
--   [FRDR documentation](https://www.frdr-dfdr.ca/docs/en/depositing_data/)
--   [Borealis user guide](https://borealisdata.ca/guides/en/latest/user/)
--   [Training resources](https://alliancecan.ca/en/services/research-data-management/learning-and-training/training-resources) from the Alliance 
+- [FAIR image data](https://www.eurobioimaging.eu/data-services/fair-image-data/) 
+- [FAIR Bioimage Metadata](https://training.galaxyproject.org/training-material/topics/imaging/tutorials/bioimage-metadata/tutorial.html)
+- [FRDR documentation](https://www.frdr-dfdr.ca/docs/en/depositing_data/)
+- [Training resources](https://alliancecan.ca/en/services/research-data-management/learning-and-training/training-resources) from the Alliance 
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 100%"}
+![This presentation is available [here](https://github.com/Alliance-RDM-GDR/RDM_BioImageFAIR) (English or French)](images/QR-code.png){fig-alt="A QR code image that redirects to the presentation located in a GitHub repository." fig-align="center" width="200" height="200"}
+:::
+::::
+:::::
 
 ### Support Services:
 
+::: {style="text-align: left;font-size: 90%"}
 Contact us to ensure that your data is well prepared and can be effectively shared with the research community.
 
 -   Email: rdm-gdr\@alliancecan.ca
 -   https://www.frdr-dfdr.ca/repo/
+:::

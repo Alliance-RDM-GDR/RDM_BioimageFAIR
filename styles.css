@@ -22,3 +22,11 @@ position: fixed;
 bottom: 45em;
 left: 108em;
 box-shadow: 3px 3px 5px #000; }
+
+.callout-header {
+  font-size: 0.9em;
+}
+    
+.callout-content {
+  font-size: 0.7em;
+}
