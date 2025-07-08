@@ -1,9 +1,9 @@
 ---
-title: "Partage d'images biomédicales et flux de travail reproductibles"
+title: "Traitement d'images biomédicales et partage de flux de travail reproductibles"
 subtitle: "Guide à l'usage des chercheurs"
 author: 
-  - name: Daniel Manrique-Castano, Ph.D
-    email: daniel.manrique-castano@alliancecan.ca
+  - name: L'équipe de curation du DFDR
+    email: curators@frdr-dfdr.ca
     affiliations:
       - name: Digital Research Alliance of Canada
 format: 
@@ -13,7 +13,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Partage d'images biomédicales et flux de travail reproductibles - Équipe de curation des données du DFDR"
+    footer: "Traitement d'images biomédicales et partage de flux de travail reproductibles - Équipe de curation des données du DFDR"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
@@ -47,7 +47,7 @@ editor: source
 ## 
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/ImagingSamples.jpg){fig-alt="Un diagramme illustrant différents types de techniques d’imagerie biologique et leurs applications. La section supérieure, intitulée 'Sample Imaging' (imagerie d’échantillons), comprend des icônes représentant divers domaines scientifiques tels que la biologie moléculaire, la génétique, la microbiologie et l’anatomie. En dessous, trois modalités d’imagerie sont représentées : 'Electron microscopy' (microscopie électronique en bleu clair), 'Light microscopy' (microscopie optique en bleu foncé) et 'Human bioimaging' (imagerie biomédicale en rouge foncé), indiquant leurs domaines d’application. En bas, 'Image data analysis' (analyse des données d’imagerie) est mentionné, soulignant l’aspect computationnel du traitement des images. Le diagramme met en évidence le rôle de l’imagerie dans plusieurs disciplines scientifiques."fig-align="center"width="100%"}
+![](images/ImagingSamples.jpg){fig-alt="Un diagramme illustrant différents types de techniques d’imagerie biologique et leurs applications. La section supérieure, intitulée 'Sample Imaging' (imagerie d’échantillons), comprend des icônes représentant divers domaines de recherche tels que la biologie moléculaire, la génétique, la microbiologie et l’anatomie. En dessous, trois modalités d’imagerie sont représentées : 'Electron microscopy' (microscopie électronique en bleu clair), 'Light microscopy' (microscopie optique en bleu foncé) et 'Human bioimaging' (imagerie biomédicale en rouge foncé), indiquant leurs domaines d’application. En bas, 'Image data analysis' (analyse des données d’imagerie) est mentionné, soulignant l’aspect computationnel du traitement des images. Le diagramme met en évidence le rôle de l’imagerie dans plusieurs disciplines de recherche."fig-align="center"width="100%"}
 :::
 
 ## Les images contiennent d'innombrables données{.center}
@@ -165,7 +165,7 @@ Pendant l'imagerie, il est nécessaire d'envisager un compromis entre les [param
 ## Considérez que...{.center}
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/Microscope.jpeg){fig-alt="Une illustration humoristique sur le thème de la science, combinant du texte et un dessin de microscope. Sur le côté gauche, un texte en gras noir indique 'BRO, DO YOU EVEN SCOPE?' avec une illustration d’un microscope optique en dessous. Sur le côté droit, sur un fond bleu clair, le texte met en avant l'importance de la formation en microscopie : 'Un microscope est aussi bon que la personne qui l’utilise. La qualité des expériences peut être améliorée grâce à la formation.' Les mots 'microscope' et 'qualité des expériences' sont mis en évidence en bleu. L’image souligne avec humour l’importance d’une bonne formation pour obtenir des résultats scientifiques de haute qualité en microscopie."fig-align="center"width="100%"}
+![](images/Microscope.jpeg){fig-alt="Une illustration humoristique sur le thème de la science, combinant du texte et un dessin de microscope. Sur le côté gauche, un texte en gras noir indique 'BRO, DO YOU EVEN SCOPE?' avec une illustration d’un microscope optique en dessous. Sur le côté droit, sur un fond bleu clair, le texte met en avant l'importance de la formation en microscopie : 'Un microscope est aussi bon que la personne qui l’utilise. La qualité des expériences peut être améliorée grâce à la formation.' Les mots 'microscope' et 'qualité des expériences' sont mis en évidence en bleu. L’image souligne avec humour l’importance d’une bonne formation pour obtenir des résultats de recherche de haute qualité en microscopie."fig-align="center"width="100%"}
 :::
 
 ## Transformer les formats de fichiers {.center}
@@ -183,7 +183,7 @@ Après avoir acquis des images originales en [formats propriétaires]{style="col
 
 :::: {#second-row}
 ::: {style="text-align: center;font-size: 70%"}
-![Bio-Formats de [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-alt="Capture d’écran de la page de publication du package 'python-bioformats 4.1.0.' La page a un fond bleu et affiche en évidence le nom et la version du package. En dessous, un extrait de commande montre comment installer le package avec pip : 'pip install python-bioformats,' avec un bouton de copie à côté. Ce package permet aux utilisateurs Python de travailler avec Bio-Formats, une bibliothèque permettant de lire et de traiter des données d’imagerie scientifique."fig-align="center"width="70%"}
+![Bio-Formats de [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-alt="Capture d’écran de la page de publication du package 'python-bioformats 4.1.0.' La page a un fond bleu et affiche en évidence le nom et la version du package. En dessous, un extrait de commande montre comment installer le package avec pip : 'pip install python-bioformats,' avec un bouton de copie à côté. Ce package permet aux utilisateurs Python de travailler avec Bio-Formats, une bibliothèque permettant de lire et de traiter des données d’imagerie de recherche."fig-align="center"width="70%"}
 :::
 ::::
 :::::
@@ -211,7 +211,7 @@ Format développé par l'[Open Microscopy Environment (OME)](https://www.openmic
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 70%"}
 - Stockage et affichage efficaces de l'image (découpage efficace à des angles arbitraires).
-- Compatible avec [Fiji](https://github.com/saalfeldlab/n5-viewer), [Napari](https://github.com/ome/napari-ome-zarr), [ITK/VTK Viewer](https://kitware.github.io/itk-vtk-viewer/docs/index.html), [Neuroglancer](https://github.com/google/neuroglancer?tab=readme-ov-file), [Vizarr](https://github.com/hms-dbmi/vizarr), et [3D Cell Viewe](https://www.allencell.org/3d-cell-viewer.html) de l'Allen Institute.
+- Compatible avec [Fiji](https://github.com/saalfeldlab/n5-viewer), [Napari](https://github.com/ome/napari-ome-zarr), [ITK/VTK Viewer](https://kitware.github.io/itk-vtk-viewer/docs/index.html), [Neuroglancer](https://github.com/google/neuroglancer?tab=readme-ov-file), [Vizarr](https://github.com/hms-dbmi/vizarr), et [3D Cell Viewer](https://www.allencell.org/3d-cell-viewer.html) de l'Allen Institute.
 - Pour une conversion par lots vers OME-Zarr basée sur Conda, visitez [ce dépôt](https://github.com/Euro-BioImaging/BatchConvert).
 - Traitez les ensembles de données OME-Zarr en Python en utilisant [cet outil](https://github.com/Euro-BioImaging/ome_zarr_pyramid).
 :::
@@ -243,7 +243,7 @@ La [planification stratégique et la gestion des données]{style="color:green ;"
 [Défis actuels :]{style="color:red ;"}
 
 - Un écosystème fragmenté [dépourvu de normes claires en matière de métadonnées]{style="color:red ;"} qui conduit à une documentation incohérente.
-- Les ~~revues scientifiques~~ et les institutions manquent de lignes directrices uniformes.
+- Les journaux scientifiques et les institutions manquent de lignes directrices uniformes.
 :::
 ::::
 :::::
@@ -371,19 +371,19 @@ OMERO intègre [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) (Met
 ::::: {layout-ncol="3"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Ordinateur d'étudiants et de post-doctorants](images/Laptop.jpg){fig-alt="Un ordinateur portable avec un écran noir posé sur une table en bois dans un café. Une tasse de café sur une soucoupe est placée à côté. En arrière-plan, une fenêtre avec un grillage laisse entrevoir des plantes à l'extérieur."fig-align="center"width="100%"}
+![Ordinateur d'étudiants et de post-doctorants](images/Laptop.jpg){fig-alt="Un ordinateur portable avec un écran noir posé sur une table en bois dans un café. Une tasse de café sur une soucoupe est placée à côté. En arrière-plan, une fenêtre avec un grillage laisse entrevoir des plantes à l'extérieur." fig-align="center"width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Réseau d'instituts](images/Network.jpg){fig-alt="Un gros plan d'un commutateur réseau avec plusieurs câbles Ethernet branchés. Les câbles orange et bleus sont soigneusement organisés et connectés au commutateur. Une étiquette avec le texte 'NorthC' est visible dans le coin supérieur droit de l'appareil."fig-align="center"width="100%"}
+![Réseau d'instituts](images/Network.jpg){fig-alt="Un gros plan d'un commutateur réseau avec plusieurs câbles Ethernet branchés. Les câbles orange et bleus sont soigneusement organisés et connectés au commutateur. Une étiquette avec le texte 'NorthC' est visible dans le coin supérieur droit de l'appareil." fig-align="center"width="100%"}
 :::
 ::::
 
 :::: {#third-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Le nuage (Google drive)](images/Cloud.jpg){fig-alt="Une vue sereine du ciel rempli de nuages blancs et moelleux s'étendant à l'horizon. La partie supérieure de l'image présente un dégradé de bleu, passant du foncé au clair à mesure qu'il rejoint les nuages."fig-align="center"width="100%"}
+![Le nuage (Google drive)](images/Cloud.jpg){fig-alt="Une vue sereine du ciel rempli de nuages blancs et moelleux s'étendant à l'horizon. La partie supérieure de l'image présente un dégradé de bleu, passant du foncé au clair à mesure qu'il rejoint les nuages." fig-align="center"width="100%"}
 :::
 ::::
 :::::
@@ -397,7 +397,7 @@ Le stockage efficace des images nécessite une [infrastructure]{style="color:gre
 :::
 
 ## Considérations relatives aux solutions de stockage{.center}
-Pour choisir la modalité de stockage, pensez qu'en tant que scientifique, nous ne voulons pas simplement stocker l'ensemble de données quelque part, nous voulons le rendre [accessible et utilisable]{style="color:green ; "}. 
+Pour choisir la modalité de stockage, pensez qu'en tant que chercheurs, nous ne voulons pas simplement stocker l'ensemble de données quelque part, nous voulons le rendre [accessible et utilisable]{style="color:green ; "}. 
 
 ::: callout-tip
 ## Nous voulons que nos images soient
@@ -431,7 +431,7 @@ Pour choisir la modalité de stockage, pensez qu'en tant que scientifique, nous 
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){fig-alt="Capture d'écran du site Web de BioImage Archive, un dépôt en ligne gratuit pour les images biologiques. La page décrit le rôle de l'archive dans le stockage et la distribution des données d'imagerie de différentes modalités, à condition qu'elles soient associées à une publication évaluée par des pairs ou qu'elles aient une valeur scientifique significative. Elle met en avant les politiques de soumission, l'intégration avec d'autres bases de données bio-imagerie comme EMPIAR et IDR, ainsi que l'adhésion aux directives FAIR et REMBI. Le panneau de droite présente des ressources supplémentaires, notamment un tutoriel rapide et une bannière promotionnelle." width="100%"}
+![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){fig-alt="Capture d'écran du site Web de BioImage Archive, un dépôt en ligne gratuit pour les images biologiques. La page décrit le rôle de l'archive dans le stockage et la distribution des données d'imagerie de différentes modalités, à condition qu'elles soient associées à une publication évaluée par des pairs ou qu'elles aient une valeur significative. Elle met en avant les politiques de soumission, l'intégration avec d'autres bases de données bio-imagerie comme EMPIAR et IDR, ainsi que l'adhésion aux directives FAIR et REMBI. Le panneau de droite présente des ressources supplémentaires, notamment un tutoriel rapide et une bannière promotionnelle." width="100%"}
 :::
 ::::
 :::::
@@ -497,7 +497,7 @@ Dans tout processus de recherche, l'analyse des images doit être :
 :::: {#third-column}
 ### Reproductible
 ::: {style="text-align: center;font-size: 60%"}
-![De https://med.stanford.edu/](images/Replication.jpg){fig-alt="Illustration d'un scientifique en blouse blanche peignant sur une toile, qui contient une image de lui-même peignant sur une toile dans une boucle récursive infinie. L'arrière-plan est rouge, créant un contraste saisissant. L'œuvre symbolise la réplication scientifique, les processus auto-référentiels et la nature itérative de la recherche."fig-align="center"width="100%"}
+![De https://med.stanford.edu/](images/Replication.jpg){fig-alt="Illustration d'un chercheur en blouse blanche peignant sur une toile, qui contient une image de lui-même peignant sur une toile dans une boucle récursive infinie. L'arrière-plan est rouge, créant un contraste saisissant. L'œuvre symbolise la réplication scientifique, les processus auto-référentiels et la nature itérative de la recherche."fig-align="center"width="100%"}
 :::
 ::::
 :::::
@@ -573,7 +573,7 @@ Transformer les résultats des tâches de bas niveau en informations ayant une s
 ## Donner la priorité aux logiciels ouverts/gratuits{.center}
 
 ::: {style="text-align: left;font-size: 80%"}
-Il existe des dizaines d'options ouvertes/gratuites pour analyser les images scientifiques et partager des flux de travail reproductibles :
+Il existe des dizaines d'options ouvertes/gratuites pour analyser les images de recherche et partager des flux de travail reproductibles :
 
 - [Fiji](https://imagej.net/software/fiji/downloads)
 - [CellPose](https://www.cellpose.org/)
@@ -661,7 +661,7 @@ En général, il s'agit d'images/figures de faible résolution (.png) qui ne son
 ::::: {layout-ncol="2"layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){fig-alt="Directives pour la présentation des images scientifiques, illustrant les meilleures pratiques pour garantir clarté et précision. Les sections comprennent : (a) mise en évidence du contenu pertinent par recadrage et redimensionnement, (b) séparation claire des images individuelles, (c) indication de l'origine des encadrés, (d) ajustement approprié de la luminosité et du contraste, (e) annotation des canaux de manière visible sur le fond, (f) utilisation des canaux en niveaux de gris pour améliorer la visibilité des caractéristiques, et (g) explication des valeurs des canaux à l'aide d'échelles de calibration et d'indicateurs."width="100%"}
+![De  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){fig-alt="Directives pour la présentation des images de recherche, illustrant les meilleures pratiques pour garantir clarté et précision. Les sections comprennent : (a) mise en évidence du contenu pertinent par recadrage et redimensionnement, (b) séparation claire des images individuelles, (c) indication de l'origine des encadrés, (d) ajustement approprié de la luminosité et du contraste, (e) annotation des canaux de manière visible sur le fond, (f) utilisation des canaux en niveaux de gris pour améliorer la visibilité des caractéristiques, et (g) explication des valeurs des canaux à l'aide d'échelles de calibration et d'indicateurs."width="100%"}
 :::
 ::::
 
@@ -684,20 +684,20 @@ Partager les données aussi ouvertement que possible et les garder aussi fermée
 
 ## {{< bi share-fill >}} Le partage des données est une responsabilité professionnelle{.center}
 
-Le dépôt d'un ensemble de données dans un référentiel n'est [PAS SEULEMENT]{style="color:red ;"} un exercice visant à répondre aux exigences des organismes de financement et des revues scientifiques. C'est une [responsabilité éthique et professionnelle]{style="color:green ;"} des chercheurs de garantir la reproductibilité de la science, ainsi que l'accès et la réutilisation des données scientifiques.
+Le dépôt d'un ensemble de données dans un référentiel n'est [PAS SEULEMENT]{style="color:red ;"} un exercice visant à répondre aux exigences des organismes de financement et des revues scientifiques. C'est une [responsabilité éthique et professionnelle]{style="color:green ;"} des chercheurs de garantir la reproductibilité de la recherche, ainsi que l'accès et la réutilisation des données de recherche.
 
 
 ## Par conséquent, la recherche doit évoluer vers: {.center} 
 
 - Des chercheurs [compétents]{style="color:green ; "} en [gestion et l'analyse des données]{style="text-decoration : underline ; "}. 
 - Des [approches normalisées]{style="color:green ; "} pour [partager]{style="text-decoration : underline ; "} les données brutes et le code d'analyse pour étayer les résultats de la recherche.
-- Des chercheurs qui [s'engagent à la transparence]{style="color:green ; "} et aux meilleures pratiques scientifiques pour garantir [l'intégrité de la recherche]{style="text-decoration : underline ; "}.
+- Des chercheurs qui [s'engagent à la transparence]{style="color:green ; "} et aux meilleures pratiques de recherche pour garantir [l'intégrité]{style="text-decoration : underline ; "}.
 
 
 ## {.center}
 
 ::: {style="text-align: center;font-size: 100%"}
-![Visitez [FRDR](https://www.frdr-dfdr.ca/repo/) ou [Borealis](https://borealisdata.ca/)](images/Repositories_Logo.png){fig-alt="Logos de deux dépôts de données de recherche canadiens : FRDR (Dépôt Fédéré de Données de Recherche) et Borealis. Le logo de FRDR présente un motif géométrique de carrés jaunes formant un losange, avec le nom du dépôt en texte noir et or. Le logo de Borealis comprend une représentation artistique des aurores boréales au-dessus de montagnes et d'un lac, avec le nom du dépôt en texte blanc en gras."fig-align="center"width="1000"height="220"}
+![Visitez [FRDR](https://www.frdr-dfdr.ca/repo/) ou [Borealis](https://borealisdata.ca/)](images/Repositories_Logo.png){fig-alt="Logos de deux dépôts de données de recherche canadiens : FRDR (Dépôt Fédéré de Données de Recherche) et Borealis. Le logo de FRDR présente un motif géométrique de carrés jaunes formant un losange, avec le nom du dépôt en texte noir et or. Le logo de Borealis comprend une représentation artistique des aurores boréales au-dessus de montagnes et d'un lac, avec le nom du dépôt en texte blanc en gras." fig-align="center"width="1000"height="220"}
 :::
 
 

@@ -1,9 +1,9 @@
 ---
-title: "Sharing biomedical images and reproducible workflows"
+title: "Handling biomedical images and sharing reproducible workflows"
 subtitle: "A primer for researchers"
 author: 
-  - name: Daniel Manrique-Castano, Ph.D
-    email: daniel.manrique-castano@alliancecan.ca
+  - name: FRDR curation team
+    email: curators@frdr-dfdr.ca
     affiliations:
       - name: Digital Research Alliance of Canada
 format: 
@@ -13,7 +13,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Sharing images and reproducible workflows - FRDR curation team"
+    footer: "Handling biomedical images and sharing reproducible workflows - FRDR curation team"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
@@ -47,7 +47,7 @@ editor: source
 ## 
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/ImagingSamples.jpg){fig-alt="A diagram illustrating different types of biological imaging techniques and their applications. The top section, labeled 'Sample Imaging,' includes icons representing various scientific fields such as molecular biology, genetics, microbiology, and anatomy. Below, three imaging modalities are depicted: 'Electron microscopy' (in light blue), 'Light microscopy' (in dark blue), and 'Human bioimaging' (in dark red), indicating their areas of application. At the bottom, 'Image data analysis' is shown, emphasizing the computational aspect of image processing. The diagram highlights the role of imaging across multiple scientific disciplines." fig-align="center" width="100%"}
+![](images/ImagingSamples.jpg){fig-alt="A diagram illustrating different types of biological imaging techniques and their applications. The top section, labeled 'Sample Imaging,' includes icons representing various research fields such as molecular biology, genetics, microbiology, and anatomy. Below, three imaging modalities are depicted: 'Electron microscopy' (in light blue), 'Light microscopy' (in dark blue), and 'Human bioimaging' (in dark red), indicating their areas of application. At the bottom, 'Image data analysis' is shown, emphasizing the computational aspect of image processing. The diagram highlights the role of imaging across multiple research disciplines." fig-align="center" width="100%"}
 :::
 
 ## Images contain countless data{.center}
@@ -165,7 +165,7 @@ During imaging it is necessary to consider a compromise between the [parameters]
 ## Consider that...{.center}
 
 ::: {style="text-align: center;font-size: 60%"}
-![](images/Microscope.jpeg){fig-alt="A humorous science-themed illustration combining text and a drawing of a microscope. On the left side, bold black text reads 'BRO, DO YOU EVEN SCOPE?' with an illustration of a compound microscope below it. On the right side, within a light blue background, the text emphasizes the importance of training in microscopy: 'A microscope is as good as the person that operates it. Experiment quality can be boosted with training.' The words 'microscope' and 'Experiment quality' are highlighted in blue. The image humorously promotes proper training for obtaining high-quality scientific results using microscopes." fig-align="center" width="100%"}
+![](images/Microscope.jpeg){fig-alt="A humorous research-themed illustration combining text and a drawing of a microscope. On the left side, bold black text reads 'BRO, DO YOU EVEN SCOPE?' with an illustration of a compound microscope below it. On the right side, within a light blue background, the text emphasizes the importance of training in microscopy: 'A microscope is as good as the person that operates it. Experiment quality can be boosted with training.' The words 'microscope' and 'Experiment quality' are highlighted in blue. The image humorously promotes proper training for obtaining high-quality research results using microscopes." fig-align="center" width="100%"}
 :::
 
 ## Transforming file formats {.center}
@@ -181,7 +181,7 @@ After acquiring original images in [proprietary formats]{style="color:red;"} (i.
 
 :::: {#second-row}
 ::: {style="text-align: center;font-size: 70%"}
-![Bio-Formats for [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-alt="A screenshot of the 'python-bioformats 4.1.0' package release page. The page has a blue background and prominently displays the package name and version. Below, a command snippet shows how to install the package using pip: 'pip install python-bioformats,' with a copy button next to it. This package enables Python users to work with Bio-Formats, a library for reading and processing scientific image data." fig-align="center" width="70%"}
+![Bio-Formats for [Python](https://pypi.org/project/python-bioformats/)](images/Bioformats-python.png){fig-alt="A screenshot of the 'python-bioformats 4.1.0' package release page. The page has a blue background and prominently displays the package name and version. Below, a command snippet shows how to install the package using pip: 'pip install python-bioformats,' with a copy button next to it. This package enables Python users to work with Bio-Formats, a library for reading and processing research image data." fig-align="center" width="70%"}
 :::
 ::::
 :::::
@@ -208,7 +208,7 @@ Is a format developed by the [Open Microscopy Environment (OME)](https://www.ope
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 80%"}
 - Efficient storage and display of the image (Efficient slicing at arbitrary angles).
-- Compatible with [Fiji](https://github.com/saalfeldlab/n5-viewer), [Napari](https://github.com/ome/napari-ome-zarr), [ITK/VTK Viewer](https://kitware.github.io/itk-vtk-viewer/docs/index.html), Google's [Neuroglancer](https://github.com/google/neuroglancer?tab=readme-ov-file), [Vizarr](https://github.com/hms-dbmi/vizarr), and Allen Institute's [3D Cell Viewe](https://www.allencell.org/3d-cell-viewer.html).
+- Compatible with [Fiji](https://github.com/saalfeldlab/n5-viewer), [Napari](https://github.com/ome/napari-ome-zarr), [ITK/VTK Viewer](https://kitware.github.io/itk-vtk-viewer/docs/index.html), Google's [Neuroglancer](https://github.com/google/neuroglancer?tab=readme-ov-file), [Vizarr](https://github.com/hms-dbmi/vizarr), and Allen Institute's [3D Cell Viewer](https://www.allencell.org/3d-cell-viewer.html).
 - For Conda-based batch conversion to OME-Zarr visit [this repository](https://github.com/Euro-BioImaging/BatchConvert).
 - Handle OME-Zarr datasets in Python using [this tool](https://github.com/Euro-BioImaging/ome_zarr_pyramid).
 :::
@@ -240,7 +240,7 @@ Strategic [planing and data management]{style="color:green;"}, cloud-ready [plat
 [Current challenges:]{style="color:red;"}
 
 - A fragmented ecosystem [lacking clear metadata standards]{style="color:red;"} that leads to inconsistent documentation.
-- ~~Journals~~ and institutions lacking uniform guidelines.
+- Journals and institutions lacking uniform guidelines.
 :::
 ::::
 :::::
@@ -374,7 +374,7 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![Institute network](images/Network.jpg){fig-alt="A close-up of a network switch with multiple Ethernet cables plugged in. The cables are orange and blue, neatly organized and connected to the switch. A label with the text 'NorthC' is visible on the top right corner of the device. " fig-align="center" width="100%"}
+![Institute network](images/Network.jpg){fig-alt="A close-up of a network switch with multiple Ethernet cables plugged in. The cables are orange and blue, neatly organized and connected to the switch. A label with the text 'NorthC' is visible on the top right corner of the device." fig-align="center" width="100%"}
 :::
 ::::
 
@@ -386,7 +386,7 @@ OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) 
 :::::
 
 ::: {style="text-align: left;font-size: 70%"}
-Eventually, biomedical images (big data) can reach [terabytes or pentabytes]{style="color:orange;"} in size, exceeding most standard file-sharing solutions.
+Eventually, biomedical images (big data) can reach [terabytes or petabytes]{style="color:orange;"} in size, exceeding most standard file-sharing solutions.
 :::
 
 ::: callout-tip
@@ -394,7 +394,7 @@ Effective image storage requires [infrastructure]{style="color:green;"}, optimiz
 :::
 
 ## Considerations for storage solutions{.center}
-For selecting the storage modality, think that, as scientist, we do not want simply to store the dataset somewhere, we want to make it [accessible and usable]{style="color:green;"}. 
+For selecting the storage modality, think that, as researchers, we do not want simply to store the dataset somewhere, we want to make it [accessible and usable]{style="color:green;"}. 
 
 ::: callout-tip
 ##  We want our images to be
@@ -422,13 +422,13 @@ For selecting the storage modality, think that, as scientist, we do not want sim
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[Image Data Resource (IDR)](https://idr.openmicroscopy.org/) and its [metadata scheme](https://github.com/IDR/idr-metadata)](images/Idr.png){fig-alt="Screenshot of the Image Data Resource (IDR) webpage, a public repository of bio-image datasets from scientific studies. The interface shows options to search for datasets, filter by type, and access specific studies. The image highlights statistics such as 132 studies, over 14 million images, and 411 TB of data, with a grid preview of available microscopy images." width="100%"}
+![[Image Data Resource (IDR)](https://idr.openmicroscopy.org/) and its [metadata scheme](https://github.com/IDR/idr-metadata)](images/Idr.png){fig-alt="Screenshot of the Image Data Resource (IDR) webpage, a public repository of bio-image datasets from research. The interface shows options to search for datasets, filter by type, and access specific studies. The image highlights statistics such as 132 studies, over 14 million images, and 411 TB of data, with a grid preview of available microscopy images." width="100%"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
-![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){fig-alt="Screenshot of the BioImage Archive website, a free online repository for biological images. The page describes the archive's role in storing and distributing imaging data from various modalities, provided they are linked to a peer-reviewed publication or have significant scientific value. It highlights submission policies, integration with other bioimaging databases like EMPIAR and IDR, and adherence to FAIR and REMBI guidelines. The right panel features additional resources, including a quick tutorial and a promotional banner." width="100%"}
+![[BioImage Archive](https://www.ebi.ac.uk/bioimage-archive/)](images/Bioimage.png){fig-alt="Screenshot of the BioImage Archive website, a free online repository for biological images. The page describes the archive's role in storing and distributing imaging data from various modalities, provided they are linked to a peer-reviewed publication or have significant value. It highlights submission policies, integration with other bioimaging databases like EMPIAR and IDR, and adherence to FAIR and REMBI guidelines. The right panel features additional resources, including a quick tutorial and a promotional banner." width="100%"}
 :::
 ::::
 :::::
@@ -494,7 +494,7 @@ In any research workflow, the analysis of images must be:
 :::: {#third-column}
 ### Reproducible
 ::: {style="text-align: center;font-size: 60%"}
-![From https://med.stanford.edu/](images/Replication.jpg){fig-alt="Illustration of a scientist in a white lab coat painting on a canvas, which contains an image of himself painting on a canvas in an infinite recursive loop. The background is red, creating a striking contrast. The artwork symbolizes scientific replication, self-referential processes, and the iterative nature of research. " fig-align="center" width="100%"}
+![From https://med.stanford.edu/](images/Replication.jpg){fig-alt="Illustration of a researcher in a white lab coat painting on a canvas, which contains an image of himself painting on a canvas in an infinite recursive loop. The background is red, creating a striking contrast. The artwork symbolizes scientific replication, self-referential processes, and the iterative nature of research. " fig-align="center" width="100%"}
 :::
 ::::
 :::::
@@ -569,7 +569,7 @@ Transform outputs from low-level tasks into information with biological meaning:
 
 ## Prioritize open/free software
 
-There are dozens of open/free options to analyze scientific images and share reproducible workflows:
+There are dozens of open/free options to analyze research images and share reproducible workflows:
 
 ::: {style="text-align: left;font-size: 80%"}
 - [Fiji](https://imagej.net/software/fiji/downloads)
@@ -645,7 +645,7 @@ Use [CODE]{style="color:green;"} not the [mouse]{style="color:red;"}!
 
 ## Publication of analysis results{.center}
 
-Sharing of [research objects]{style="color:green;"} in public, active research management repositories, like the [Open Science Framework (OSF)](https://osf.io/) is an excellent strategy to promote open, reproducible science. Please consider sharing illustrative images, figures and tables used in publication.   
+Sharing of [research objects]{style="color:green;"} in public, active research management repositories, like the [Open Science Framework (OSF)](https://osf.io/) is an excellent strategy to promote open, reproducible research. Please consider sharing illustrative images, figures and tables used in publication.   
 
 ::: callout-tip
 In general, these are lower resolution images/figures (.png) not used for analysis but for illustration in research reports (thesis, articles).
@@ -656,7 +656,7 @@ In general, these are lower resolution images/figures (.png) not used for analys
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"}
-![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){fig-alt="Guidelines for scientific image presentation, illustrating best practices for clarity and accuracy. Sections include: (a) focusing on relevant image content through cropping and resizing, (b) separating individual images, (c) indicating the origin of insets, (d) adjusting brightness and contrast appropriately, (e) ensuring channel annotations are visible against the background, (f) using grayscale channels to improve visibility of features, and (g) explaining channel values with calibration scales and indicators. " width="100%"}
+![From  [Schmied et al., 2023](https://www.nature.com/articles/s41592-023-01987-9)](images/CheckList_Formatting.webp){fig-alt="Guidelines for research image presentation, illustrating best practices for clarity and accuracy. Sections include: (a) focusing on relevant image content through cropping and resizing, (b) separating individual images, (c) indicating the origin of insets, (d) adjusting brightness and contrast appropriately, (e) ensuring channel annotations are visible against the background, (f) using grayscale channels to improve visibility of features, and (g) explaining channel values with calibration scales and indicators. " width="100%"}
 :::
 ::::
 
@@ -679,13 +679,13 @@ Share the data as openly as possible and keep it only as closed as necessary.
 
 ## {{< bi share-fill >}} Sharing data is a professional responsibility{.center}
 
-Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise in meeting the requirements of funding agencies and journals. It is an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible science, and the access and reuse of scientific data.
+Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise in meeting the requirements of funding agencies and journals. It is an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible research, and the access and reuse of research data.
 
 ## Therefore, research needs to move towards{.center} 
 
 - [Competent]{style="color:green;"} researchers in [RDM]{style="text-decoration: underline;"} and data analysis.
 - [Standardized approaches]{style="color:green;"} to [sharing]{style="text-decoration: underline;"} raw data and analysis code to support research findings.
-- Researchers with a [commitment to transparency]{style="color:green;"} and best scientific practices to ensure [research integrity]{style="text-decoration: underline;"}.
+- Researchers with a [commitment to transparency]{style="color:green;"} and best research practices to ensure [integrity]{style="text-decoration: underline;"}.
 
 
 ## {.center}
