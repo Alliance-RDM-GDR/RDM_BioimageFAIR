@@ -61,7 +61,7 @@ editor: source
 
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 80%"}
-Bioimaging has entered the realm of big data comprising [increasingly complex datasets]{style="color:green;"}. We face numerous challenges, specifically, proper [data handling]{style="text-decoration: underline;"} and [management]{style="text-decoration: underline;"} and the creation and sharing of [reproducible image analysis]{style="text-decoration: underline;"} workflows.
+Bioimaging has entered the realm of big data comprising [increasingly complex datasets]{style="color:green;"}. We face numerous challenges, specifically proper [data handling]{style="text-decoration: underline;"} and [management]{style="text-decoration: underline;"} and the creation and sharing of [reproducible image analysis]{style="text-decoration: underline;"} workflows.
 :::
 ::::
 :::::
@@ -82,7 +82,7 @@ BioImages have the potential for scientific discovery beyond its original acquis
 ::::
 :::::
 
-# Planning and adquiring images
+# Planning and acquiring images
 
 ## Overview {.center}
 
@@ -113,7 +113,7 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
-### {{< bi gear-fill >}} Imaging Hadware
+### {{< bi gear-fill >}} Imaging Hardware
 ::: {style="text-align: left;font-size: 80%"}
 - Imaging device (light, confocal, electron) 
 - Define imaging parameters - suitable for image analysis
@@ -123,7 +123,7 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 :::: {#second-column}
 ### {{< bi database-fill >}} storage of images
 ::: {style="text-align: left;font-size: 80%"}
--   Image size - Gigas or terabytes
+-   Image size - Gigabytes (GB) or terabytes (TB)
 -   Image complexity - Single or multiple focal planes, Live or time-lapse images
 :::
 ::::
@@ -131,11 +131,11 @@ Conventional file-system-based storage is quickly reaching its [limits]{style="c
 
 ::: callout-warning
 ## How will you handle your images?
-While panning an imaging experiment, consider the most [suitable approach]{style="text-decoration: underline;"} given your capabilities for [data handling and analysis]{style="color:green;"}. 
+While planning an imaging experiment, consider the most [suitable approach]{style="text-decoration: underline;"} given your capabilities for [data handling and analysis]{style="color:green;"}. 
 :::
 
 
-## Data adquisition{.center}  
+## Data acquisition{.center}  
 ::: {style="text-align: left;font-size: 80%"}
 - {{< bi gear-fill >}} Desirable instrument [setup and calibration]{style="color:green;"} and [imaging parameters]{style="color:green;"} (size, bit depth, saturation, etc.).
 - {{< bi card-image >}} Prioritize [open file formats]{style="color:green;"} (.TIFF) over proprietary (.CZI).
@@ -143,7 +143,7 @@ While panning an imaging experiment, consider the most [suitable approach]{style
 :::
 
 ::: callout-tip
-## Adquisition parameters are key
+## Acquisition parameters are key
 During imaging it is necessary to consider a compromise between the [parameters]{style="color:green;"} needed to answer the research question (magnification, size, bit depth) and the [available processing power]{style="color:green;"} (storage, computing power).
 :::
 
@@ -258,7 +258,7 @@ Strategic [planing and data management]{style="color:green;"}, cloud-ready [plat
 ::: {style="text-align: left;font-size: 80%"}
 **REMBI** advice metadata guidelines to address the needs of diverse biomedical imaging communities. 
 
-A summary template is available [here](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx). 
+A [summary template](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx) is available on our GitHub. 
 
 :::
 ::::
@@ -274,7 +274,7 @@ A summary template is available [here](https://github.com/Alliance-RDM-GDR/RDM_B
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
-Use [controlled vocabulary]{style="color:green;"} (ontologies) to specify objects, their categories and relationships. 
+Use a [controlled vocabulary]{style="color:green;"} (ontology) to specify objects, their categories and relationships. 
 ::::
 
 :::: {#second-column}
@@ -333,7 +333,7 @@ The MethodsJ2 Fiji plugIn [generates text]({style="color:green;"}) for microscop
 
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 80%"}
-OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z) (MetaData Editor for microscopy) an tool that provides an easy way to explore and edit metadata from images.
+OMERO incorporates [MDEmic](https://www.nature.com/articles/s41592-021-01288-z), MetaData Editor for microscopy, a tool that provides an easy way to explore and edit metadata from images.
 :::
 ::::
 :::::
@@ -394,20 +394,20 @@ Effective image storage requires [infrastructure]{style="color:green;"}, optimiz
 :::
 
 ## Considerations for storage solutions{.center}
-For selecting the storage modality, think that, as researchers, we do not want simply to store the dataset somewhere, we want to make it [accessible and usable]{style="color:green;"}. 
+For selecting the storage modality, remember that as researchers we do not simply want to store the dataset somewhere; we want to make it [accessible and usable]{style="color:green;"}. 
 
 ::: callout-tip
 ##  We want our images to be
 - {{< bi search >}} Findable (Persistent identifiers, Indexed in a searchable resource)
 - {{< bi hdd-fill >}} Accessible (Software requirements, Open file formats)
-- {{< bi diagram-2-fill >}} Interoperable (rich metadata, standardized parameters)
-- {{< bi recycle >}} Reusable (descriptive metadata, Clear license and usage rights)
+- {{< bi diagram-2-fill >}} Interoperable (Rich metadata, Rtandardized parameters)
+- {{< bi recycle >}} Reusable (Descriptive metadata, Clear license and usage rights)
 :::
 
 ## Where do I share my images?{.center}
 
 ::: {style="text-align: center;font-size: 80%"}
-![Examples of generalist repositories](images/Repositories.png){fig-alt="A collection of logos representing various research data repositories, including OSF, Dryad, FRDR, DFDR, BioStudies, Zenodo, and Borealis. These repositories support open science by providing platforms for data sharing and preservation." width="100%"}
+![Examples of generalist repositories](images/Repositories.png){fig-alt="A collection of logos representing various research data repositories, including OSF, Dryad, FRDR, BioStudies, Zenodo, and Borealis. These repositories support open science by providing platforms for data sharing and preservation." width="100%"}
 :::
 
 ## Features of some generalist repositories{.center}
@@ -460,7 +460,7 @@ These instances are installed in dedicated network (core facility) space for lon
 - [Raw]{style="color:orange;"} and [processed]{style="color:green;"} images (processing operations should not alter the original image).
 - [Uncompressed]{style="color:green;"} and [lossless]{style="color:green;"} open file formats.
 - OME-TIFF retain original (i.e .czi) metadata.
-- PNG (images with annotations) is preferred.
+- PNG is preferred for annotated images.
 - Accurate and descriptive (machine readable) [naming conventions]{style="color:green;"} (i.e Subject_Group_Area_Marker): Use grouping factors to name images.
 - Creation of [README files]{style="color:green;"} to contextualize and describe the content and methods used in the dataset. 
 - Use CC-BY, or CC0 licenses.
@@ -525,7 +525,7 @@ B --> C[Spatial analysis]
 ```
 
 ::: callout-tip
-Modularity allows to [construct complex analysis pipelines]{style="color:green;"} from independent components that can function together. This promotes the [reuse]{style="text-decoration: underline;"} of independent modules.
+Modularity allows you to [construct complex analysis pipelines]{style="color:green;"} from independent components that can function together. This promotes the [reuse]{style="text-decoration: underline;"} of independent modules.
 :::
 
 ## Hierarchy of image analysis tasks {.center}
@@ -637,9 +637,9 @@ Use [CODE]{style="color:green;"} not the [mouse]{style="color:red;"}!
 ## Overall{.center}
 
 ::: callout-tip
-- Keep track of all changes and analysis procedures perform to images. 
-- Organize and link files (using naming conventions) through processing to avoid errors.
-- Select final or intermediate results to share considering aspects such as storing space and long-term preservation. 
+- Keep track of all changes and analysis procedures performed on images. 
+- Organize and link files (using naming conventions) throughout processing to avoid errors.
+- Select final or intermediate results to share, considering aspects such as storage space and long-term preservation. 
 :::
 
 
@@ -667,7 +667,7 @@ Click to see examples of published results [images](https://osf.io/mb257/) and [
 ::::
 :::::
 
-## Data are generally not shared{.center}
+## Data should be shared{.center}
 
 ‘Data is available on request’ statements in publications are found to be often unreliable in practice ([Schmidt et al., 2024](https://onlinelibrary.wiley.com/doi/10.1111/jmi.13317)) 
 
@@ -679,7 +679,7 @@ Share the data as openly as possible and keep it only as closed as necessary.
 
 ## {{< bi share-fill >}} Sharing data is a professional responsibility{.center}
 
-Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise in meeting the requirements of funding agencies and journals. It is an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible research, and the access and reuse of research data.
+Depositing a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise in meeting the requirements of funding agencies and journals. It is an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible research, and facilitate the access and reuse of research data.
 
 ## Therefore, research needs to move towards{.center} 
 
