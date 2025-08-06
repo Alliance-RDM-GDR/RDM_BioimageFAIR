@@ -307,8 +307,8 @@ FRDR curation team
 <h3 id="imaging-hadware"><i class="bi-gear-fill " style="" role="img" aria-hidden="true"></i> Imaging Hadware</h3>
 <div style="text-align: left;font-size: 80%">
 <ul>
-<li>Imaging device (light, confocal, electron)</li>
-<li>Define imaging parameters - suitable for image analysis</li>
+<li>Imaging device (light, confocal, electron).</li>
+<li>Define imaging parameters - suitable for image analysis.</li>
 </ul>
 </div>
 </div>
@@ -316,13 +316,14 @@ FRDR curation team
 <h3 id="storage-of-images"><i class="bi-database-fill " style="" role="img" aria-hidden="true"></i> storage of images</h3>
 <div style="text-align: left;font-size: 80%">
 <ul>
-<li>Image size - Gigas or terabytes</li>
-<li>Image complexity - Single or multiple focal planes, Live or time-lapse images</li>
+<li>Image size - Gigas or terabytes.</li>
+<li>Image complexity - Single or multiple focal planes, Live or time-lapse images.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -336,6 +337,7 @@ FRDR curation team
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="data-adquisition" class="slide level2 center">
 <h2>Data adquisition</h2>
@@ -346,6 +348,7 @@ FRDR curation team
 <li><i class="bi-database-fill " style="" role="img" aria-hidden="true"></i> Recording of <span style="color:green;">metadata</span>.</li>
 </ul>
 </div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -356,6 +359,7 @@ FRDR curation team
 </div>
 <div class="callout-content">
 <p>During imaging it is necessary to consider a compromise between the <span style="color:green;">parameters</span> needed to answer the research question (magnification, size, bit depth) and the <span style="color:green;">available processing power</span> (storage, computing power).</p>
+</div>
 </div>
 </div>
 </div>
@@ -402,7 +406,9 @@ FRDR curation team
 </section>
 <section id="transforming-file-formats" class="slide level2 center">
 <h2>Transforming file formats</h2>
+<div style="text-align: left;font-size: 80%">
 <p>After acquiring original images in <span style="color:red;">proprietary formats</span> (i.e .CZI or .LIF), researchers can use different tools to open and transform the images to <span style="color:green;">open formats</span> (.TIFF).</p>
+</div>
 <div>
 
 </div>
@@ -435,6 +441,7 @@ FRDR curation team
 </section>
 <section id="the-ome.tiff-format" class="slide level2 center">
 <h2>The OME.TIFF format</h2>
+<div style="text-align: left;font-size: 80%">
 <p>Is a format developed by the <a href="https://www.openmicroscopy.org/">Open Microscopy Environment (OME)</a> based on TIFF specification. OME-TIFF incorporates:</p>
 <ul>
 <li><a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2005-6-5-r47">OME-XML</a> metadata.</li>
@@ -442,9 +449,10 @@ FRDR curation team
 <li>Supports complex multidimensional and high-content screening data using <a href="http://bigtiff.org/">BigTiff</a>, given the limitations of TIFF (up to 4GB).</li>
 <li>Can distribute the data across multiple files (see <a href="https://downloads.openmicroscopy.org/images/OME-TIFF/2015-01/tubhiswt-4D/">example</a>).</li>
 </ul>
+</div>
 </section>
-<section id="next-generation-file-format-ome-zarr" class="slide level2">
-<h2>Next-Generation File Format <a href="https://link.springer.com/article/10.1007/s00418-023-02209-1" class="center">OME-Zarr</a></h2>
+<section id="next-generation-file-format-ome-zarr" class="slide level2 center">
+<h2>Next-Generation File Format OME-Zarr</h2>
 <div>
 
 </div>
@@ -461,12 +469,12 @@ FRDR curation team
 </div>
 </div>
 <div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div style="text-align: left;font-size: 80%">
+<div style="text-align: left;font-size: 70%">
 <ul>
 <li>Efficient storage and display of the image (Efficient slicing at arbitrary angles).</li>
 <li>Compatible with <a href="https://github.com/saalfeldlab/n5-viewer">Fiji</a>, <a href="https://github.com/ome/napari-ome-zarr">Napari</a>, <a href="https://kitware.github.io/itk-vtk-viewer/docs/index.html">ITK/VTK Viewer</a>, Google’s <a href="https://github.com/google/neuroglancer?tab=readme-ov-file">Neuroglancer</a>, <a href="https://github.com/hms-dbmi/vizarr">Vizarr</a>, and Allen Institute’s <a href="https://www.allencell.org/3d-cell-viewer.html">3D Cell Viewer</a>.</li>
 <li>For Conda-based batch conversion to OME-Zarr visit <a href="https://github.com/Euro-BioImaging/BatchConvert">this repository</a>.</li>
-<li>Handle OME-Zarr datasets in Python using <a href="https://github.com/Euro-BioImaging/ome_zarr_pyramid">this tool</a>.</li>
+<li>Handle <a href="(https://link.springer.com/article/10.1007/s00418-023-02209-1)">OME-Zarr</a> datasets in Python using <a href="https://github.com/Euro-BioImaging/ome_zarr_pyramid">this tool</a>.</li>
 </ul>
 </div>
 </div>
@@ -475,7 +483,7 @@ FRDR curation team
 </section>
 <section id="take-home-message" class="slide level2 center">
 <h2>Take home message</h2>
-<div style="text-align: center;font-size: 100%">
+<div style="text-align: left;font-size: 100%">
 <p>Strategic <span style="color:green;">planing and data management</span>, cloud-ready <span style="color:green;">platforms and formats</span>, and institutional support ensure scalable, accessible, and <span style="text-decoration: underline;">reusable</span> imaging data.</p>
 </div>
 </section></section>
@@ -535,8 +543,8 @@ FRDR curation team
 </div>
 </div>
 </section>
-<section id="recommended-metadata-for-biological-images-rembi" class="slide level2">
-<h2>Recommended Metadata for Biological Images <a href="https://www.nature.com/articles/s41592-021-01166-8" class="center">(REMBI)</a></h2>
+<section id="recommended-metadata-for-biological-images-rembi" class="slide level2 center">
+<h2>Recommended Metadata for Biological Images (REMBI)</h2>
 <div>
 
 </div>
@@ -554,7 +562,7 @@ FRDR curation team
 </div>
 <div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div style="text-align: left;font-size: 80%">
-<p><strong>REMBI</strong> advice metadata guidelines to address the needs of diverse biomedical imaging communities.</p>
+<p><a href="https://www.nature.com/articles/s41592-021-01166-8">REMBI</a> advice metadata guidelines to address the needs of diverse biomedical imaging communities.</p>
 <p>A summary template is available <a href="https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR/blob/main/resources/REMBI_Overview.xlsx">here</a>.</p>
 </div>
 </div>
@@ -619,14 +627,33 @@ FRDR curation team
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="web-based-ontology-services" class="slide level2 center">
+<h2>Web-based ontology services</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div style="text-align: center;font-size: 80%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/OLS.png" style="width:90.0%" alt="Screenshot of the EMBL-EBI Ontology Lookup Service (OLS) homepage. The interface provides a search bar for finding biomedical ontology terms, with options to filter by exact match, include obsolete terms, and include imported terms. Below, there are three sections: 'About OLS,' describing its function as a repository for biomedical ontologies; 'Related Tools,' mentioning additional ontology mapping services like OxO and ZOOMA; and 'Report an Issue,' directing users to a GitHub issue tracker for feedback and ontology requests."></p>
+<p><img data-src="images/OLS.png" style="width:100.0%" alt="Screenshot of the EMBL-EBI Ontology Lookup Service (OLS) homepage. The interface provides a search bar for finding biomedical ontology terms, with options to filter by exact match, include obsolete terms, and include imported terms. Below, there are three sections: 'About OLS,' describing its function as a repository for biomedical ontologies; 'Related Tools,' mentioning additional ontology mapping services like OxO and ZOOMA; and 'Report an Issue,' directing users to a GitHub issue tracker for feedback and ontology requests."></p>
 <figcaption><a href="https://www.ebi.ac.uk/ols4/">EMBL-EBI Ontology Lookup Service</a></figcaption>
 </figure>
+</div>
+</div>
+</div>
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div style="text-align: center;font-size: 80%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Bioportal.png" style="width:100.0%" alt="Screenshot of Bioportal. This is a comprehensive repository of biomedical ontologies. The interface provides a search bar for finding biomedical ontology terms, with options for advanced search. It shows also a graphs depicting visits and key site statistics."></p>
+<figcaption><a href="https://bioportal.bioontology.org/">Biportal</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -640,7 +667,9 @@ FRDR curation team
 </figure>
 </div>
 </div>
+<div style="text-align: left;font-size: 80%">
 <p>Visit the <a href="https://wu-bimac.github.io/MicroMetaApp.github.io/">MicroMeta App</a> and the associated <a href="https://www.nature.com/articles/s41592-021-01315-z">research article</a></p>
+</div>
 </section>
 <section id="methods-j2-plugin" class="slide level2 center">
 <h2>Methods J2 PlugIn</h2>
@@ -798,6 +827,7 @@ FRDR curation team
 <div style="text-align: left;font-size: 70%">
 <p>Eventually, biomedical images (big data) can reach <span style="color:orange;">terabytes or petabytes</span> in size, exceeding most standard file-sharing solutions.</p>
 </div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -811,10 +841,12 @@ FRDR curation team
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="considerations-for-storage-solutions" class="slide level2 center">
 <h2>Considerations for storage solutions</h2>
 <p>For selecting the storage modality, think that, as researchers, we do not want simply to store the dataset somewhere, we want to make it <span style="color:green;">accessible and usable</span>.</p>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -825,11 +857,12 @@ FRDR curation team
 </div>
 <div class="callout-content">
 <ul>
-<li><i class="bi-search " style="" role="img" aria-hidden="true"></i> Findable (Persistent identifiers, Indexed in a searchable resource)</li>
-<li><i class="bi-hdd-fill " style="" role="img" aria-hidden="true"></i> Accessible (Software requirements, Open file formats)</li>
-<li><i class="bi-diagram-2-fill " style="" role="img" aria-hidden="true"></i> Interoperable (rich metadata, standardized parameters)</li>
-<li><i class="bi-recycle " style="" role="img" aria-hidden="true"></i> Reusable (descriptive metadata, Clear license and usage rights)</li>
+<li><i class="bi-search " style="" role="img" aria-hidden="true"></i> Findable (Persistent identifiers, Indexed in a searchable resource).</li>
+<li><i class="bi-hdd-fill " style="" role="img" aria-hidden="true"></i> Accessible (Software requirements, Open file formats).</li>
+<li><i class="bi-diagram-2-fill " style="" role="img" aria-hidden="true"></i> Interoperable (rich metadata, standardized parameters).</li>
+<li><i class="bi-recycle " style="" role="img" aria-hidden="true"></i> Reusable (descriptive metadata, Clear license and usage rights).</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -851,7 +884,7 @@ FRDR curation team
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/Repositories_Features.webp" style="width:100.0%" alt="Comparison table of various research data repositories including Zenodo, Figshare, Dryad, Bioimage Archive, Image Data Repository, Broad Bioimage Benchmark Collection, and The Cell Painting Gallery. The table details repository URLs, qualifications, support for non-image data, size limits, costs, and metadata requirements.  "></p>
-<figcaption>From <a href="https://www.nature.com/articles/s41592-023-01987-9/figures/7">Schmied. et al (2024)</a></figcaption>
+<figcaption>From <a href="https://www.nature.com/articles/s41592-023-01987-9/figures/7">Schmied. et al (2023)</a></figcaption>
 </figure>
 </div>
 </div>
@@ -921,7 +954,7 @@ FRDR curation team
 </section>
 <section id="characteristics-of-shared-images" class="slide level2 center">
 <h2>Characteristics of shared images</h2>
-<div style="text-align: left;font-size: 70%">
+<div style="text-align: left;font-size: 60%">
 <ul>
 <li><span style="color:orange;">Raw</span> and <span style="color:green;">processed</span> images (processing operations should not alter the original image).</li>
 <li><span style="color:green;">Uncompressed</span> and <span style="color:green;">lossless</span> open file formats.</li>
@@ -932,6 +965,7 @@ FRDR curation team
 <li>Use CC-BY, or CC0 licenses.</li>
 </ul>
 </div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -942,6 +976,7 @@ FRDR curation team
 </div>
 <div class="callout-content">
 <p>“We strongly discourage author statements that images ‘are available upon request’, as this has been shown to be inefficient” (<a href="https://www.nature.com/articles/s41592-023-01987-9">Schmied et al.&nbsp;2023</a>)</p>
+</div>
 </div>
 </div>
 </div>
@@ -1017,12 +1052,15 @@ FRDR curation team
 </section>
 <section id="image-analysis-from-rdm-perspective" class="slide level2 center">
 <h2>Image analysis from RDM perspective</h2>
+<div style="text-align: left;font-size: 80%">
 <p>From an RDM perspective, analysis of biomedical images ideally entails:</p>
 <ul>
-<li><i class="bi-unlock " style="" role="img" aria-hidden="true"></i> Access to large datasets</li>
-<li><i class="bi-file-earmark-text-fill " style="" role="img" aria-hidden="true"></i> Records of image processing (code, scripts)</li>
-<li><i class="bi-share-fill " style="" role="img" aria-hidden="true"></i> Sharing of results (images, tables, graphs)</li>
+<li><i class="bi-unlock " style="" role="img" aria-hidden="true"></i> Access to large datasets.</li>
+<li><i class="bi-file-earmark-text-fill " style="" role="img" aria-hidden="true"></i> Records of image processing (code, scripts).</li>
+<li><i class="bi-share-fill " style="" role="img" aria-hidden="true"></i> Sharing of results (images, tables, graphs).</li>
 </ul>
+</div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1033,6 +1071,7 @@ FRDR curation team
 </div>
 <div class="callout-content">
 <p>Accurate, descriptive <span style="color:green;">naming conventions and README</span> files with metadata, or codebooks are vital to assure the integrity of analysis pipelines.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1054,6 +1093,7 @@ B --&gt; C[Spatial analysis]
 </div>
 </div>
 </div>
+<div style="text-align: left;font-size: 80%">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1064,6 +1104,7 @@ B --&gt; C[Spatial analysis]
 </div>
 <div class="callout-content">
 <p>Modularity allows to <span style="color:green;">construct complex analysis pipelines</span> from independent components that can function together. This promotes the <span style="text-decoration: underline;">reuse</span> of independent modules.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1135,9 +1176,11 @@ B --&gt; C[Spatial analysis]
 </ul>
 </div>
 </section>
-<section id="a-great-resource-for-images-analysis-bioimage" class="slide level2 center">
-<h2>A great resource for images analysis: BioImage</h2>
+<section id="bioimage-as-resource-for-images-analysis-pipelines" class="slide level2 center">
+<h2>BioImage as resource for images analysis pipelines</h2>
+<div style="text-align: left;font-size: 80%">
 <p><a href="https://doi.org/10.1101/2022.06.07.495102">BioImage.IO</a> is a community-driven AI model repository that provides access to pretrained AI models with a plethora of open/free software partners.</p>
+</div>
 <div>
 
 </div>
@@ -1206,7 +1249,7 @@ B --&gt; C[Spatial analysis]
 </section>
 <section id="why-to-use-code" class="slide level2 center">
 <h2>Why to use code?</h2>
-<div style="text-align: center;font-size: 80%">
+<div style="text-align: left;font-size: 80%">
 <p>“The mouse is antisocial. The GUI is antisocial. So, what’s that mean? You have a problem to solve, and you solve it with a GUI. What do you have? A problem solved. But when you solve it with a command line interface in a scripting environment, you have an <span style="color:green;">artifact</span>. And all of the sudden, that artifact can be shared with someone” <strong>Jeffrey Snover</strong></p>
 </div>
 <div style="text-align: center;font-size: 150%">
@@ -1235,7 +1278,9 @@ B --&gt; C[Spatial analysis]
 </section>
 <section id="publication-of-analysis-results" class="slide level2 center">
 <h2>Publication of analysis results</h2>
+<div style="text-align: left;font-size: 80%">
 <p>Sharing of <span style="color:green;">research objects</span> in public, active research management repositories, like the <a href="https://osf.io/">Open Science Framework (OSF)</a> is an excellent strategy to promote open, reproducible research. Please consider sharing illustrative images, figures and tables used in publication.</p>
+</div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1275,9 +1320,11 @@ B --&gt; C[Spatial analysis]
 </div>
 </div>
 </section>
-<section id="data-are-generally-not-shared" class="slide level2 center">
-<h2>Data are generally not shared</h2>
+<section id="data-should-be-shared" class="slide level2 center">
+<h2>Data should be shared</h2>
+<div style="text-align: left;font-size: 80%">
 <p>‘Data is available on request’ statements in publications are found to be often unreliable in practice (<a href="https://onlinelibrary.wiley.com/doi/10.1111/jmi.13317">Schmidt et al., 2024</a>)</p>
+</div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1304,7 +1351,7 @@ B --&gt; C[Spatial analysis]
 <li>Researchers with a <span style="color:green;">commitment to transparency</span> and best research practices to ensure <span style="text-decoration: underline;">integrity</span>.</li>
 </ul>
 </section>
-<section id="section-3" class="slide level2 center">
+<section id="section-2" class="slide level2 center">
 <h2></h2>
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
@@ -1323,16 +1370,18 @@ B --&gt; C[Spatial analysis]
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<h3 id="supporting-material">Supporting material</h3>
+<section id="supporting-material" style="text-align: center;font-size: 80%">
+<h3>Supporting material</h3>
 <ul>
 <li><a href="https://www.eurobioimaging.eu/data-services/fair-image-data/">FAIR image data</a></li>
 <li><a href="https://training.galaxyproject.org/training-material/topics/imaging/tutorials/bioimage-metadata/tutorial.html">FAIR Bioimage Metadata</a></li>
 <li><a href="https://www.frdr-dfdr.ca/docs/en/depositing_data/">FRDR documentation</a></li>
 <li><a href="https://alliancecan.ca/en/services/research-data-management/learning-and-training/training-resources">Training resources</a> from the Alliance</li>
 </ul>
+</section>
 </div>
 <div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div style="text-align: center;font-size: 100%">
+<div style="text-align: center;font-size: 80%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/QR-code.png" alt="A QR code image that redirects to the presentation located in a GitHub repository." width="200" height="200"></p>
@@ -1357,7 +1406,7 @@ B --&gt; C[Spatial analysis]
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/alliance_logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Handling biomedical images and sharing reproducible workflows - FRDR curation team</p>
+<p>Sharing images and reproducible workflows - FRDR curation team</p>
 </div>
 </div></div>
 
@@ -1368,6 +1417,9 @@ B --&gt; C[Spatial analysis]
   <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/reveal-audio-recorder/recorder.js"></script>
+  <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/reveal-audio-recorder/RecordRTC.js"></script>
+  <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/reveal-audio-slideshow/plugin.js"></script>
   <script src="RDM_BioImageFAIR_en_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1389,6 +1441,19 @@ B --&gt; C[Spatial analysis]
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
+'0': {"prefix":"getPath() + \"/playback/\""},
+'1': {"suffix":".webm"},
+'2': {"textToSpeechURL":null},
+'3': {"defaultNotes":false},
+'4': {"defaultText":false},
+'5': {"advance":0},
+'6': {"autoplay":false},
+'7': {"defaultDuration":5},
+'8': {"defaultAudios":true},
+'9': {"defaultPlaybackRate":1},
+'10': {"playerOpacity":0.05},
+'11': {"playerStyle":"position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;"},
+'12': {"startAtFragment":false},
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
@@ -1560,7 +1625,7 @@ B --&gt; C[Spatial analysis]
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealAudioRecorder, RevealAudioSlideshow, QuartoSupport,
 
           RevealMath,
           RevealNotes,

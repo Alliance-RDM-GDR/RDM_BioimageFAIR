@@ -1,0 +1,30 @@
+title: audio-slideshow
+authors:
+  - name: Lorenz A. Kapsner
+    orcid: 0000-0003-1866-860X
+  - name: Asvin Goel
+version: 1.0.0
+quarto-required: ">=1.5.0"
+contributes:
+  revealjs-plugins:
+    - name: RevealAudioRecorder
+      script:
+        - recorder.js
+        - RecordRTC.js
+    - name: RevealAudioSlideshow
+      script:
+        - plugin.js
+      config:
+        - prefix: getPath() + "/playback/"
+        - suffix: ".webm"
+        - textToSpeechURL: null
+        - defaultNotes: false
+        - defaultText: false
+        - advance: 0
+        - autoplay: false
+        - defaultDuration: 5
+        - defaultAudios: true
+        - defaultPlaybackRate: 1.0
+        - playerOpacity: 0.05
+        - playerStyle: "position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;"
+        - startAtFragment: false
