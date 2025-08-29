@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this presentation in your work, please cite it using the following metadata."
+title: "Handling and organizing research data: A primer for researchers"
+version: 2025.09
+date-released: 2025-08-29
+authors:
+  - family-names: Manrique-Castano
+    given-names: Daniel
+    affiliation: Digital Research Alliance of Canada
+    orcid: https://orcid.org/0000-0002-1912-1764  
+  - name: Digital Research Alliance of Canada
+    affiliation: https://alliancecan.ca/en
+
+repository-code: https://github.com/Alliance-RDM-GDR/CUR_Res_OrganizeData
+license: CC-BY 4.0
+keywords:
+  - research data management
+  - open science
+  - data curation
+  - data repositories
+  - FRDR
+
+type: Presentation
+doi: 10.5281/zenodo.16995433

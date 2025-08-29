@@ -33,10 +33,6 @@ format:
       - audioAutoplay: false
       - audioControls: true
       
-  docx:
-    number-sections: true
-    highlight-style: github
-      
 filters:
   - reveal-auto-agenda
 auto-agenda:
